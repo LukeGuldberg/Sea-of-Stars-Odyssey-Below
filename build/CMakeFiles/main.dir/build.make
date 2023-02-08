@@ -52,10 +52,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization
+CMAKE_SOURCE_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build
+CMAKE_BINARY_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -70,34 +70,84 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/main.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/EX1-drawrect/code-organization/main.cpp
+CMakeFiles/main.dir/main.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/main.cpp
 CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.obj"
-	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.obj -MF CMakeFiles\main.dir\main.cpp.obj.d -o CMakeFiles\main.dir\main.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.obj -MF CMakeFiles\main.dir\main.cpp.obj.d -o CMakeFiles\main.dir\main.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\main.cpp > CMakeFiles\main.dir\main.cpp.i
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\main.cpp > CMakeFiles\main.dir\main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\main.cpp -o CMakeFiles\main.dir\main.cpp.s
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\main.cpp -o CMakeFiles\main.dir\main.cpp.s
+
+CMakeFiles/main.dir/graphics.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/graphics.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/graphics.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/graphics.cpp
+CMakeFiles/main.dir/graphics.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/graphics.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/graphics.cpp.obj -MF CMakeFiles\main.dir\graphics.cpp.obj.d -o CMakeFiles\main.dir\graphics.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.cpp
+
+CMakeFiles/main.dir/graphics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/graphics.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.cpp > CMakeFiles\main.dir\graphics.cpp.i
+
+CMakeFiles/main.dir/graphics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/graphics.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.cpp -o CMakeFiles\main.dir\graphics.cpp.s
+
+CMakeFiles/main.dir/player.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/player.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/player.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/player.cpp
+CMakeFiles/main.dir/player.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/player.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/player.cpp.obj -MF CMakeFiles\main.dir\player.cpp.obj.d -o CMakeFiles\main.dir\player.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\player.cpp
+
+CMakeFiles/main.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/player.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\player.cpp > CMakeFiles\main.dir\player.cpp.i
+
+CMakeFiles/main.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/player.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\player.cpp -o CMakeFiles\main.dir\player.cpp.s
+
+CMakeFiles/main.dir/world.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/world.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/world.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/world.cpp
+CMakeFiles/main.dir/world.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/world.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/world.cpp.obj -MF CMakeFiles\main.dir\world.cpp.obj.d -o CMakeFiles\main.dir\world.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.cpp
+
+CMakeFiles/main.dir/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/world.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.cpp > CMakeFiles\main.dir\world.cpp.i
+
+CMakeFiles/main.dir/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/world.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.cpp -o CMakeFiles\main.dir\world.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.cpp.obj"
+"CMakeFiles/main.dir/main.cpp.obj" \
+"CMakeFiles/main.dir/graphics.cpp.obj" \
+"CMakeFiles/main.dir/player.cpp.obj" \
+"CMakeFiles/main.dir/world.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main.exe: CMakeFiles/main.dir/main.cpp.obj
+main.exe: CMakeFiles/main.dir/graphics.cpp.obj
+main.exe: CMakeFiles/main.dir/player.cpp.obj
+main.exe: CMakeFiles/main.dir/world.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
-main.exe: libgamelib.a
-main.exe: C:/Users/lukeg/code/GameDev/SDL-SDL2/SDL2-2.26.2-win32-x64/SDL2.dll
+main.exe: C:/msys64/mingw64/lib/libSDL2.dll.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +159,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build C:\Users\lukeg\code\GameDev\SDL-SDL2\EX1-drawrect\code-organization\build\CMakeFiles\main.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles\main.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

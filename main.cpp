@@ -1,18 +1,21 @@
+#define SDL_MAIN_HANDLED
+#include <SDL2/SDL.h>
+
+#include <iostream>
+
 #include "graphics.h"
 #include "player.h"
 #include "world.h"
-#include <SDL2/SDL.h>
-#include <iostream>
 
 int main() {
     Graphics graphics{"game", 1280, 720};
-    
+
     // objects
     Player player{600, 300, 64};
-    
+
     World world;
     world.add_platform(320, 500, 512, 64);
-    
+
     bool running{true};
     while (running) {
         SDL_Event event;
@@ -40,4 +43,3 @@ int main() {
         graphics.update();
     }
 }
-

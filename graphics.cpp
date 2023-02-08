@@ -1,7 +1,8 @@
 #include "graphics.h"
-#include <iostream>
+
 #include <SDL2/SDL.h>
 
+#include <iostream>
 #include <stdexcept>
 
 Graphics::Graphics(const std::string& title, int window_width,
@@ -11,13 +12,12 @@ Graphics::Graphics(const std::string& title, int window_width,
     if (result < 0) {
         std::cout << SDL_GetError() << "\n";
     }
-    SDL_Window* window =
-        SDL_CreateWindow("Cool Game Title", SDL_WINDOWPOS_CENTERED,
-                         SDL_WINDOWPOS_CENTERED, 1280, 720, 0);
+    window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED,
+                              SDL_WINDOWPOS_CENTERED, 1280, 720, 0);
     if (!window) {
         std::cout << SDL_GetError() << "\n";
     }
-    SDL_Renderer* renderer = SDL_CreateRenderer(
+    renderer = SDL_CreateRenderer(
         window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     // initialize SDL, create a window and renderer
     // make sure to check all return values and throw exceptions when errors

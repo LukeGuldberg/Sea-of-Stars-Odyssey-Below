@@ -7,11 +7,21 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "C:/Users/lukeg/code/GameDev/SDL-SDL2/EX1-drawrect/code-organization/CMakeLists.txt"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/CMakeLists.txt"
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeRCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeSystem.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2Config.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2ConfigVersion.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2Targets-release.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2Targets.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2mainTargets-release.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2mainTargets.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2staticTargets-release.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2staticTargets.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2testTargets-release.cmake"
+  "C:/msys64/mingw64/lib/cmake/SDL2/SDL2testTargets.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/CMakeCInformation.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/CMakeCXXInformation.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -25,6 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-C.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-CXX.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Compiler/GNU.cmake"
+  "C:/msys64/mingw64/share/cmake/Modules/FeatureSummary.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C.cmake"
   "C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -48,6 +59,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/gamelib.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   )
