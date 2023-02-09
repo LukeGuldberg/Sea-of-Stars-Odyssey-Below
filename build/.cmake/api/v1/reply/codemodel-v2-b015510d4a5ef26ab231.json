@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "sdl",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "gamelib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gamelib-Debug-c46f528f9216725fe4c4.json",
+					"name" : "gamelib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-c24cbf1bf5efdafa3f34.json",
+					"jsonFile" : "target-main-Debug-f666eddd1807bb9cc76d.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

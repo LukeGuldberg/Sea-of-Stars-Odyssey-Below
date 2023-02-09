@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named gamelib
+
+# Build rule for target.
+gamelib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gamelib
+.PHONY : gamelib
+
+# fast build rule for target.
+gamelib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/build
+.PHONY : gamelib/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -133,7 +146,7 @@ graphics.obj: graphics.cpp.obj
 
 # target to build an object file
 graphics.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/graphics.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/graphics.cpp.obj
 .PHONY : graphics.cpp.obj
 
 graphics.i: graphics.cpp.i
@@ -141,7 +154,7 @@ graphics.i: graphics.cpp.i
 
 # target to preprocess a source file
 graphics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/graphics.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/graphics.cpp.i
 .PHONY : graphics.cpp.i
 
 graphics.s: graphics.cpp.s
@@ -149,7 +162,7 @@ graphics.s: graphics.cpp.s
 
 # target to generate assembly for a file
 graphics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/graphics.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/graphics.cpp.s
 .PHONY : graphics.cpp.s
 
 main.obj: main.cpp.obj
@@ -181,7 +194,7 @@ player.obj: player.cpp.obj
 
 # target to build an object file
 player.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/player.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.obj
 .PHONY : player.cpp.obj
 
 player.i: player.cpp.i
@@ -189,7 +202,7 @@ player.i: player.cpp.i
 
 # target to preprocess a source file
 player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.i
 .PHONY : player.cpp.i
 
 player.s: player.cpp.s
@@ -197,7 +210,7 @@ player.s: player.cpp.s
 
 # target to generate assembly for a file
 player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.s
 .PHONY : player.cpp.s
 
 world.obj: world.cpp.obj
@@ -205,7 +218,7 @@ world.obj: world.cpp.obj
 
 # target to build an object file
 world.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/world.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/world.cpp.obj
 .PHONY : world.cpp.obj
 
 world.i: world.cpp.i
@@ -213,7 +226,7 @@ world.i: world.cpp.i
 
 # target to preprocess a source file
 world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/world.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/world.cpp.i
 .PHONY : world.cpp.i
 
 world.s: world.cpp.s
@@ -221,7 +234,7 @@ world.s: world.cpp.s
 
 # target to generate assembly for a file
 world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/world.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/world.cpp.s
 .PHONY : world.cpp.s
 
 # Help Target
@@ -232,6 +245,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... gamelib
 	@echo ... main
 	@echo ... graphics.obj
 	@echo ... graphics.i

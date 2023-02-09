@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libgamelib.a CMakeFiles/gamelib.dir/graphics.cpp.obj CMakeFiles/gamelib.dir/player.cpp.obj CMakeFiles/gamelib.dir/world.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libgamelib.a
