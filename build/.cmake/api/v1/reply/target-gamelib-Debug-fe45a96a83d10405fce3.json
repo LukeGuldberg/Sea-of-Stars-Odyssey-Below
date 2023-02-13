@@ -80,7 +80,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization"
+					"path" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer"
 				},
 				{
 					"backtrace" : 4,
@@ -93,7 +93,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -113,7 +114,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -135,6 +137,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "world.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "vec.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

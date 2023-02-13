@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/main.cpp.obj: \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\main.cpp \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\main.cpp \
  C:/msys64/mingw64/include/SDL2/SDL.h \
  C:/msys64/mingw64/include/SDL2/SDL_main.h \
  C:/msys64/mingw64/include/SDL2/SDL_stdinc.h \
@@ -300,11 +300,33 @@ CMakeFiles/main.dir/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/istream \
  C:/msys64/mingw64/include/c++/12.2.0/bits/istream.tcc \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\player.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\player.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
+ C:/msys64/mingw64/include/c++/12.2.0/functional \
+ C:/msys64/mingw64/include/c++/12.2.0/tuple \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/uses_allocator.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/std_function.h \
+ C:/msys64/mingw64/include/c++/12.2.0/unordered_map \
+ C:/msys64/mingw64/include/c++/12.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable_policy.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/enable_special_members.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/unordered_map.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/erase_if.h \
  C:/msys64/mingw64/include/c++/12.2.0/vector \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_uninitialized.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_vector.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_bvector.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc
+ C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc \
+ C:/msys64/mingw64/include/c++/12.2.0/array \
+ C:/msys64/mingw64/include/c++/12.2.0/compare \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_tempbuf.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/uniform_int_dist.h \
+ C:/msys64/mingw64/include/c++/12.2.0/sstream \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/sstream.tcc \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.h

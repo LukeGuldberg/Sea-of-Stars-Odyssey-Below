@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "gamelib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-gamelib-Debug-c46f528f9216725fe4c4.json",
+					"jsonFile" : "target-gamelib-Debug-fe45a96a83d10405fce3.json",
 					"name" : "gamelib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-f666eddd1807bb9cc76d.json",
+					"jsonFile" : "target-main-Debug-1927f8ec939469587fbf.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build",
-		"source" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization"
+		"build" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+		"source" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer"
 	},
 	"version" : 
 	{

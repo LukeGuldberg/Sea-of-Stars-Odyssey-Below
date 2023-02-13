@@ -56,10 +56,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization
+CMAKE_SOURCE_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build
+CMAKE_BINARY_DIR = C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -213,6 +213,30 @@ player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.s
 .PHONY : player.cpp.s
 
+vec.obj: vec.cpp.obj
+.PHONY : vec.obj
+
+# target to build an object file
+vec.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/vec.cpp.obj
+.PHONY : vec.cpp.obj
+
+vec.i: vec.cpp.i
+.PHONY : vec.i
+
+# target to preprocess a source file
+vec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/vec.cpp.i
+.PHONY : vec.cpp.i
+
+vec.s: vec.cpp.s
+.PHONY : vec.s
+
+# target to generate assembly for a file
+vec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/vec.cpp.s
+.PHONY : vec.cpp.s
+
 world.obj: world.cpp.obj
 .PHONY : world.obj
 
@@ -256,6 +280,9 @@ help:
 	@echo ... player.obj
 	@echo ... player.i
 	@echo ... player.s
+	@echo ... vec.obj
+	@echo ... vec.i
+	@echo ... vec.s
 	@echo ... world.obj
 	@echo ... world.i
 	@echo ... world.s

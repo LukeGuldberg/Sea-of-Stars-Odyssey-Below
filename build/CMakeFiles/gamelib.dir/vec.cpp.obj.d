@@ -1,6 +1,6 @@
 CMakeFiles/gamelib.dir/vec.cpp.obj: \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\vec.cpp \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\vec.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.cpp \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
  C:/msys64/mingw64/include/c++/12.2.0/functional \
  C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/os_defines.h \

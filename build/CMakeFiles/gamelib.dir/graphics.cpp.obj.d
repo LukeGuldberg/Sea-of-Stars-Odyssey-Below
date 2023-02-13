@@ -1,6 +1,6 @@
 CMakeFiles/gamelib.dir/graphics.cpp.obj: \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.cpp \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\graphics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.cpp \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
  C:/msys64/mingw64/include/SDL2/SDL.h \
  C:/msys64/mingw64/include/SDL2/SDL_main.h \
  C:/msys64/mingw64/include/SDL2/SDL_stdinc.h \

@@ -2,7 +2,7 @@
 #include <functional>
 #include <sstream>
 #include <stdexcept>
-template <template T>
+template <typename T>
 class Vec {
 public:
     Vec(T x = T{}, T y = T{}) : x{x}, y{y} {}
@@ -51,12 +51,13 @@ Vec<T> operator*(Vec<T> left, T scalar) {
     return left *= Vec{scalar, scalar};
 }
 
+template <typename T>
 Vec<T> operator*(T scalar, const Vec<T>* right) {
     return right * scalar;
 }
 
 template <typename T>
-Vec<T>& operator/=(Vec<T>&, T scalar) {
+Vec<T>& operator/=(Vec<T>& left, T scalar) {
     if (scalar == 0) {
         std::stringstream msg{"Cannot divide "};
         msg << left << " by " << scalar;
@@ -67,6 +68,7 @@ Vec<T>& operator/=(Vec<T>&, T scalar) {
     return left;
 }
 
+template <typename T>
 Vec<T> operator/(Vec<T> left, T scalar) {
     return left /= scalar;
 }
@@ -76,16 +78,16 @@ bool operator==(const Vec<T>& left, const Vec<T>& right) {
     // TODO what ab doubles?
     // add an almost_equal() for comparing similar doubles
     // ie. 1.00000000001 == 1.00000000003
-    return left.x == right.x && left.y++ right.y;
+    return left.x == right.x && left.y == right.y;
 }
 
-template <template T>
+template <typename T>
 bool operator!=(const Vec<T>& left, const Vec<T>& right) {
     return !(left == right);
 }
 
 // TODO add distance between vectors
-template <template T>
+template <typename T>
 std::ostream& operator<<(std::ostream& os, const Vec<T> vec) {
     return os << "(" << vec.x << ", " << vec.y << ")";
 }
@@ -102,5 +104,5 @@ struct hash<Vec<int>> {
         hash_combine(seed, v.x);
         hash_combine(seed, v.y);
     }
-}
+};
 }  // namespace std

@@ -1,4 +1,4 @@
-C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build/CMakeFiles/gamelib.dir
-C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build/CMakeFiles/main.dir
-C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build/CMakeFiles/edit_cache.dir
-C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build/CMakeFiles/rebuild_cache.dir
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build/CMakeFiles/gamelib.dir
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build/CMakeFiles/main.dir
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build/CMakeFiles/edit_cache.dir
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build/CMakeFiles/rebuild_cache.dir

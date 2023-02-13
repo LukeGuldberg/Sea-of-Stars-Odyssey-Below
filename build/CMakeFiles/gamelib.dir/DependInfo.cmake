@@ -8,9 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/graphics.cpp" "CMakeFiles/gamelib.dir/graphics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/graphics.cpp.obj.d"
-  "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/player.cpp" "CMakeFiles/gamelib.dir/player.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/player.cpp.obj.d"
-  "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/world.cpp" "CMakeFiles/gamelib.dir/world.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/world.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/graphics.cpp" "CMakeFiles/gamelib.dir/graphics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/graphics.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.cpp" "CMakeFiles/gamelib.dir/player.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/player.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/vec.cpp" "CMakeFiles/gamelib.dir/vec.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/vec.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.cpp" "CMakeFiles/gamelib.dir/world.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/world.cpp.obj.d"
   )
 
 # Targets to which this target links.

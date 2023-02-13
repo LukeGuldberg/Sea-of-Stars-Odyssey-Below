@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build"
+			"value" : "c:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization"
+			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1270,18 +1270,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "FindSDL_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for FindSDL."
-				}
-			],
-			"type" : "PATH",
-			"value" : "FindSDL_DIR-NOTFOUND"
-		},
-		{
 			"name" : "SDL2_DIR",
 			"properties" : 
 			[
@@ -1315,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization/build"
+			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build"
 		},
 		{
 			"name" : "sdl_IS_TOP_LEVEL",
@@ -1339,7 +1327,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/code-organization"
+			"value" : "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer"
 		}
 	],
 	"kind" : "cache",

@@ -4,9 +4,14 @@
 
 #include <algorithm>
 
-void World::add_platform(int x, int y, int width, int height) {}
+void World::add_platform(int x, int y, int width, int height) {
+    SDL_Rect platform{x, y, width, height};
+    platforms.push_back(platform);
+}
 
-const std::vector<SDL_Rect>& World::get_platforms() const {}
+const std::vector<SDL_Rect>& World::get_platforms() const {
+    return platforms;
+}
 
 bool World::has_any_intersections(const SDL_Rect& bounding_box) const {
     // test if the given bounding_box intersects any of the platforms

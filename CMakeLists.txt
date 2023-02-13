@@ -11,7 +11,7 @@ add_library(gamelib
   graphics.cpp
   player.cpp
   world.cpp
-#   vec.cpp
+  vec.cpp
 )
 target_include_directories(gamelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${SDL2_INCLUDES})
 target_link_libraries(gamelib PUBLIC SDL2::SDL2)

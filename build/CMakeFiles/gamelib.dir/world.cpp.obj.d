@@ -1,6 +1,6 @@
 CMakeFiles/gamelib.dir/world.cpp.obj: \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.cpp \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\code-organization\world.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.cpp \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.h \
  C:/msys64/mingw64/include/SDL2/SDL.h \
  C:/msys64/mingw64/include/SDL2/SDL_main.h \
  C:/msys64/mingw64/include/SDL2/SDL_stdinc.h \
