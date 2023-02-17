@@ -3,10 +3,10 @@
 #include <algorithm>
 
 #include "world.h"
-constexpr double walk_acceleration = 30;
+constexpr double walk_acceleration = 70;
 constexpr double terminal_velocity = 300;
 constexpr double jump_velocity = 100;
-constexpr double gravity = 20;
+constexpr double gravity = 50;
 constexpr double damping = 0.9;
 
 Player::Player(const Vec<double>& position, const Vec<int>& size)
@@ -70,7 +70,7 @@ void Player::update(World& world, double dt) {
     future.y = static_cast<int>(ftr_pos.y);
     if (world.has_any_intersections(future)) {
         // collided
-        acceleration.y = 0;
+        acceleration.y = ftr_acc.y;
         velocity.y = 0;
     } else {
         acceleration.y = ftr_acc.y;
