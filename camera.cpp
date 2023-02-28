@@ -1,22 +1,18 @@
 #include "camera.h"
 
+#include <algorithm>
+
 #include "graphics.h"
 #include "tilemap.h"
-
 Camera::Camera(Graphics& graphics, int tilesize)
     : graphics{graphics}, tilesize{tilesize} {
     calculate_visible_tiles();
 }
 void Camera::move_to(const Vec<double>& new_location) {
     location.x = new_location.x;
-    location.y = visible_max.y / 2;
-    double diff = new_location.y - visible_max.y + 5;
-    if (diff > 0) {
-        location.y += diff;
-    } else {
-        location.y = 5;
-    }
-
+    location.y = new_location.y;
+    location.y =
+        std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
     calculate_visible_tiles();
 }
 
