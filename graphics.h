@@ -14,7 +14,7 @@ public:
     ~Graphics();
 
     void clear();
-    void draw(const SDL_Rect& rect, const Color& color);
+    void draw(const SDL_Rect& rect, const Color& color, bool filled=true);
     void update();
     const int width, height;
 private:

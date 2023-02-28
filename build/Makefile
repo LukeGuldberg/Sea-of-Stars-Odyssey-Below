@@ -141,6 +141,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+camera.obj: camera.cpp.obj
+.PHONY : camera.obj
+
+# target to build an object file
+camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/camera.cpp.obj
+.PHONY : camera.cpp.obj
+
+camera.i: camera.cpp.i
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
 graphics.obj: graphics.cpp.obj
 .PHONY : graphics.obj
 
@@ -213,6 +237,30 @@ player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.s
 .PHONY : player.cpp.s
 
+tilemap.obj: tilemap.cpp.obj
+.PHONY : tilemap.obj
+
+# target to build an object file
+tilemap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/tilemap.cpp.obj
+.PHONY : tilemap.cpp.obj
+
+tilemap.i: tilemap.cpp.i
+.PHONY : tilemap.i
+
+# target to preprocess a source file
+tilemap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/tilemap.cpp.i
+.PHONY : tilemap.cpp.i
+
+tilemap.s: tilemap.cpp.s
+.PHONY : tilemap.s
+
+# target to generate assembly for a file
+tilemap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/tilemap.cpp.s
+.PHONY : tilemap.cpp.s
+
 vec.obj: vec.cpp.obj
 .PHONY : vec.obj
 
@@ -271,6 +319,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... gamelib
 	@echo ... main
+	@echo ... camera.obj
+	@echo ... camera.i
+	@echo ... camera.s
 	@echo ... graphics.obj
 	@echo ... graphics.i
 	@echo ... graphics.s
@@ -280,6 +331,9 @@ help:
 	@echo ... player.obj
 	@echo ... player.i
 	@echo ... player.s
+	@echo ... tilemap.obj
+	@echo ... tilemap.i
+	@echo ... tilemap.s
 	@echo ... vec.obj
 	@echo ... vec.i
 	@echo ... vec.s

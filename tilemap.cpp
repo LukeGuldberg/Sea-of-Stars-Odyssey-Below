@@ -1,5 +1,7 @@
 #include "tilemap.h"
 
+#include <sstream>
+#include <stdexcept>
 Tilemap::Tilemap(int width, int height)
     : width{width}, height{height}, tiles{width * height} {
     if (width < 1) {
@@ -11,14 +13,14 @@ Tilemap::Tilemap(int width, int height)
     std::fill(std::begin(tiles), std::end(tiles), Tile::Open);
 }
 
-const Tile& Tilemap::operator(int x, int y) const {
+const Tile& Tilemap::operator()(int x, int y) const {
     check_bounds(x, y);
-    return iles.at(x + y * width);
+    return tiles.at(x + y * width);
 }
 
-Tile& Tilemap::operator(int x, int y) {
+Tile& Tilemap::operator()(int x, int y) {
     check_bounds(x, y);
-    return iles.at(x + y * width);
+    return tiles.at(x + y * width);
 }
 
 void Tilemap::check_bounds(int x, int y) const {

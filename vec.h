@@ -103,6 +103,7 @@ struct hash<Vec<int>> {
         std::size_t seed = 0;
         hash_combine(seed, v.x);
         hash_combine(seed, v.y);
+        return seed;
     }
 };
 }  // namespace std

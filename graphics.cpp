@@ -37,11 +37,16 @@ void Graphics::clear() {
     SDL_RenderClear(renderer);
 }
 
-void Graphics::draw(const SDL_Rect& rect, const Color& color) {
+void Graphics::draw(const SDL_Rect& rect, const Color& color, bool filled) {
     // draw a filled rectangle
     SDL_SetRenderDrawColor(renderer, color.red, color.green, color.blue,
                            color.alpha);
-    SDL_RenderFillRect(renderer, &rect);
+    if (filled) {
+        SDL_RenderFillRect(renderer, &rect);
+    } else{
+        SDL_RenderDrawRect(renderer, &rect);
+    }
+    
 }
 
 void Graphics::update() {

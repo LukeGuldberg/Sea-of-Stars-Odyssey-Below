@@ -331,4 +331,5 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/algorithm \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/execution_defs.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.h
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\tilemap.h

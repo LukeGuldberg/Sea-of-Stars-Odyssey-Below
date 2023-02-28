@@ -3,15 +3,16 @@
 #include <algorithm>
 
 #include "world.h"
-constexpr double walk_acceleration = 70;
-constexpr double terminal_velocity = 300;
-constexpr double jump_velocity = 100;
-constexpr double gravity = 50;
-constexpr double damping = 0.9;
+constexpr double walk_acceleration = 18;
+constexpr double terminal_velocity = 70;
+constexpr double jump_velocity = 4;
+constexpr double gravity = -6;
+constexpr double damping = 0.95;
 
 Player::Player(const Vec<double>& position, const Vec<int>& size)
     : position{position}, size{size} {
-    acceleration.y = gravity;
+    acceleration = {0, gravity};
+    velocity = {0, 0};
 }
 
 // vel += accel * dt
@@ -25,63 +26,48 @@ void Player::handle_input(const SDL_Event& event) {
         } else if (key == SDLK_LEFT) {
             acceleration.x = -walk_acceleration;
         } else if (key == SDLK_SPACE) {
-            velocity.y = -jump_velocity;
+            velocity.y = jump_velocity;
             acceleration.y = gravity;
         }
     }
     if (event.type == SDL_KEYUP) {
         SDL_Keycode key = event.key.keysym.sym;
         if (key == SDLK_RIGHT) {
+            // velocity.x = 0;
             acceleration.x = 0;
         } else if (key == SDLK_LEFT) {
+            // velocity.x = 0;
             acceleration.x = 0;
         }
     }
 }
 
 void Player::update(World& world, double dt) {
-    // make copy of physics components
-    Vec<double> ftr_vel = velocity;
-    Vec<double> ftr_acc = acceleration;
-    Vec<double> ftr_pos = position;
-
     // update physics, semi-implicit euler
-    ftr_vel += acceleration * dt;
-    ftr_vel.x *= damping;  // "friction"
+    velocity += acceleration * dt;
+    velocity.x *= damping;
     // keep velocity under terminal
-    ftr_vel.x = std::clamp(ftr_vel.x, -terminal_velocity, terminal_velocity);
-    ftr_vel.y = std::clamp(ftr_vel.y, -terminal_velocity, terminal_velocity);
-    ftr_pos += ftr_vel * dt;
-    SDL_Rect future{static_cast<int>(ftr_pos.x), static_cast<int>(position.y),
-                    size.x, size.y};
+    velocity.x = std::clamp(velocity.x, -terminal_velocity, terminal_velocity);
+    velocity.y = std::clamp(velocity.y, -terminal_velocity, terminal_velocity);
 
-    // test x intersections first
-    if (world.has_any_intersections(future)) {
-        // collided
-        acceleration.x = 0;
-        velocity.x = 0;
-    } else {
-        acceleration.x = ftr_acc.x;
-        velocity.x = ftr_vel.x;
-        position.x = ftr_pos.x;
-    }
-    // test y intersections
-    future.x = static_cast<int>(position.x);
-    future.y = static_cast<int>(ftr_pos.y);
-    if (world.has_any_intersections(future)) {
-        // collided
-        acceleration.y = ftr_acc.y;
-        velocity.y = 0;
-    } else {
-        acceleration.y = ftr_acc.y;
-        velocity.y = ftr_vel.y;
-        position.y = ftr_pos.y;
-    }
+    Vec<double> displacement = velocity * dt;
+
+    // attempt to move in x first
+    Vec<double> future{position.x + displacement.x, position.y};
+    Vec<double> vx{velocity.x, 0};
+    world.move_to(future, size, vx);
+
+    // attempt to move y
+    Vec<double> vy{0, velocity.y};
+    future.y += displacement.y;
+    world.move_to(future, size, vy);
+
+    // update position and velocity of player
+    position = future;
+    velocity.x = vx.x;
+    velocity.y = vy.y;
 }
 
-std::pair<SDL_Rect, Color> Player::get_sprite() const {
-    int x = static_cast<int>(position.x);  // round down
-    int y = static_cast<int>(position.y);
-    SDL_Rect bounding_box{x, y, size.x, size.y};
-    return {bounding_box, {255, 0, 255, 255}};
+std::pair<Vec<double>, Color> Player::get_sprite() const {
+    return {position, {255, 0, 255, 255}};
 }

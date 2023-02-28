@@ -13,7 +13,7 @@ public:
     Player(const Vec<double>& position, const Vec<int>& size);
     void handle_input(const SDL_Event& event);
     void update(World& world, double dt);
-    std::pair<SDL_Rect, Color> get_sprite() const;
+    std::pair<Vec<double>, Color> get_sprite() const;
 
 private:
     Vec<double> position;
