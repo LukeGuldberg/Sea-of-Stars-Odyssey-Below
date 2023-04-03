@@ -3,6 +3,7 @@
 #include <algorithm>
 
 #include "graphics.h"
+#include "player.h"
 #include "tilemap.h"
 Camera::Camera(Graphics& graphics, int tilesize)
     : graphics{graphics}, tilesize{tilesize} {
@@ -53,17 +54,28 @@ void Camera::render(const Tilemap& tilemap, bool grid_on) const {
             Vec<double> position{static_cast<double>(x),
                                  static_cast<double>(y)};
             if (tile == Tile::Platform) {
-                render(position, {255, 255, 0, 255});
+                render(position, Color{255, 255, 0, 255});
             } else {
-                render(position, {0, 127, 127, 255});
+                render(position, Color{0, 127, 127, 255});
             }
             if (grid_on) {
-                render(position, {0, 0, 0, 255}, false);
+                render(position, Color{0, 0, 0, 255}, false);
             }
         }
     }
 }
 
+void Camera::render(const Vec<double>& position, const Sprite& sprite) const {
+    Vec<int> pixel = world_to_screen(position);
+    pixel.y +=
+        tilesize / 2;  // shift sprite's bottom center down to bottom of tile
+    graphics.draw_sprite(pixel, sprite);
+}
+
+void Camera::render(const Player& player) const {
+    render(player.physics.position, player.color);
+    render(player.physics.position, player.sprite);
+}
 void Camera::calculate_visible_tiles() {
     // number of tiles visible(plus one for the edges)
     Vec<int> num_tiles =

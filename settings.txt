@@ -1,0 +1,6 @@
+title super-awesome-platformer
+screen_width 1280
+screen_height 720
+tile_size 64
+characters assets/characters2.txt
+sounds assets/sounds.txt

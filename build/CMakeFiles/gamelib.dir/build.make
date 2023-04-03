@@ -158,6 +158,141 @@ CMakeFiles/gamelib.dir/tilemap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/tilemap.cpp.s"
 	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\tilemap.cpp -o CMakeFiles\gamelib.dir\tilemap.cpp.s
 
+CMakeFiles/gamelib.dir/physics.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/physics.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/physics.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.cpp
+CMakeFiles/gamelib.dir/physics.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/gamelib.dir/physics.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/physics.cpp.obj -MF CMakeFiles\gamelib.dir\physics.cpp.obj.d -o CMakeFiles\gamelib.dir\physics.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.cpp
+
+CMakeFiles/gamelib.dir/physics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/physics.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.cpp > CMakeFiles\gamelib.dir\physics.cpp.i
+
+CMakeFiles/gamelib.dir/physics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/physics.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.cpp -o CMakeFiles\gamelib.dir\physics.cpp.s
+
+CMakeFiles/gamelib.dir/fsm.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/fsm.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/fsm.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.cpp
+CMakeFiles/gamelib.dir/fsm.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/gamelib.dir/fsm.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/fsm.cpp.obj -MF CMakeFiles\gamelib.dir\fsm.cpp.obj.d -o CMakeFiles\gamelib.dir\fsm.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.cpp
+
+CMakeFiles/gamelib.dir/fsm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/fsm.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.cpp > CMakeFiles\gamelib.dir\fsm.cpp.i
+
+CMakeFiles/gamelib.dir/fsm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/fsm.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.cpp -o CMakeFiles\gamelib.dir\fsm.cpp.s
+
+CMakeFiles/gamelib.dir/command.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/command.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/command.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp
+CMakeFiles/gamelib.dir/command.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/gamelib.dir/command.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/command.cpp.obj -MF CMakeFiles\gamelib.dir\command.cpp.obj.d -o CMakeFiles\gamelib.dir\command.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.cpp
+
+CMakeFiles/gamelib.dir/command.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/command.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.cpp > CMakeFiles\gamelib.dir\command.cpp.i
+
+CMakeFiles/gamelib.dir/command.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/command.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.cpp -o CMakeFiles\gamelib.dir\command.cpp.s
+
+CMakeFiles/gamelib.dir/engine.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/engine.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/engine.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/engine.cpp
+CMakeFiles/gamelib.dir/engine.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/gamelib.dir/engine.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/engine.cpp.obj -MF CMakeFiles\gamelib.dir\engine.cpp.obj.d -o CMakeFiles\gamelib.dir\engine.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.cpp
+
+CMakeFiles/gamelib.dir/engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/engine.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.cpp > CMakeFiles\gamelib.dir\engine.cpp.i
+
+CMakeFiles/gamelib.dir/engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/engine.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.cpp -o CMakeFiles\gamelib.dir\engine.cpp.s
+
+CMakeFiles/gamelib.dir/settings.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/settings.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/settings.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.cpp
+CMakeFiles/gamelib.dir/settings.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/gamelib.dir/settings.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/settings.cpp.obj -MF CMakeFiles\gamelib.dir\settings.cpp.obj.d -o CMakeFiles\gamelib.dir\settings.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\settings.cpp
+
+CMakeFiles/gamelib.dir/settings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/settings.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\settings.cpp > CMakeFiles\gamelib.dir\settings.cpp.i
+
+CMakeFiles/gamelib.dir/settings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/settings.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\settings.cpp -o CMakeFiles\gamelib.dir\settings.cpp.s
+
+CMakeFiles/gamelib.dir/sprite.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/sprite.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/sprite.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.cpp
+CMakeFiles/gamelib.dir/sprite.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/gamelib.dir/sprite.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/sprite.cpp.obj -MF CMakeFiles\gamelib.dir\sprite.cpp.obj.d -o CMakeFiles\gamelib.dir\sprite.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\sprite.cpp
+
+CMakeFiles/gamelib.dir/sprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/sprite.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\sprite.cpp > CMakeFiles\gamelib.dir\sprite.cpp.i
+
+CMakeFiles/gamelib.dir/sprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/sprite.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\sprite.cpp -o CMakeFiles\gamelib.dir\sprite.cpp.s
+
+CMakeFiles/gamelib.dir/audio.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/audio.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/audio.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.cpp
+CMakeFiles/gamelib.dir/audio.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/gamelib.dir/audio.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/audio.cpp.obj -MF CMakeFiles\gamelib.dir\audio.cpp.obj.d -o CMakeFiles\gamelib.dir\audio.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\audio.cpp
+
+CMakeFiles/gamelib.dir/audio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/audio.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\audio.cpp > CMakeFiles\gamelib.dir\audio.cpp.i
+
+CMakeFiles/gamelib.dir/audio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/audio.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\audio.cpp -o CMakeFiles\gamelib.dir\audio.cpp.s
+
+CMakeFiles/gamelib.dir/animatedsprite.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/animatedsprite.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/animatedsprite.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.cpp
+CMakeFiles/gamelib.dir/animatedsprite.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/gamelib.dir/animatedsprite.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/animatedsprite.cpp.obj -MF CMakeFiles\gamelib.dir\animatedsprite.cpp.obj.d -o CMakeFiles\gamelib.dir\animatedsprite.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.cpp
+
+CMakeFiles/gamelib.dir/animatedsprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/animatedsprite.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.cpp > CMakeFiles\gamelib.dir\animatedsprite.cpp.i
+
+CMakeFiles/gamelib.dir/animatedsprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/animatedsprite.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.cpp -o CMakeFiles\gamelib.dir\animatedsprite.cpp.s
+
+CMakeFiles/gamelib.dir/randomness.cpp.obj: CMakeFiles/gamelib.dir/flags.make
+CMakeFiles/gamelib.dir/randomness.cpp.obj: CMakeFiles/gamelib.dir/includes_CXX.rsp
+CMakeFiles/gamelib.dir/randomness.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/randomness.cpp
+CMakeFiles/gamelib.dir/randomness.cpp.obj: CMakeFiles/gamelib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/gamelib.dir/randomness.cpp.obj"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gamelib.dir/randomness.cpp.obj -MF CMakeFiles\gamelib.dir\randomness.cpp.obj.d -o CMakeFiles\gamelib.dir\randomness.cpp.obj -c C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\randomness.cpp
+
+CMakeFiles/gamelib.dir/randomness.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelib.dir/randomness.cpp.i"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\randomness.cpp > CMakeFiles\gamelib.dir\randomness.cpp.i
+
+CMakeFiles/gamelib.dir/randomness.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelib.dir/randomness.cpp.s"
+	C:\msys64\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\randomness.cpp -o CMakeFiles\gamelib.dir\randomness.cpp.s
+
 # Object files for target gamelib
 gamelib_OBJECTS = \
 "CMakeFiles/gamelib.dir/graphics.cpp.obj" \
@@ -165,7 +300,16 @@ gamelib_OBJECTS = \
 "CMakeFiles/gamelib.dir/world.cpp.obj" \
 "CMakeFiles/gamelib.dir/vec.cpp.obj" \
 "CMakeFiles/gamelib.dir/camera.cpp.obj" \
-"CMakeFiles/gamelib.dir/tilemap.cpp.obj"
+"CMakeFiles/gamelib.dir/tilemap.cpp.obj" \
+"CMakeFiles/gamelib.dir/physics.cpp.obj" \
+"CMakeFiles/gamelib.dir/fsm.cpp.obj" \
+"CMakeFiles/gamelib.dir/command.cpp.obj" \
+"CMakeFiles/gamelib.dir/engine.cpp.obj" \
+"CMakeFiles/gamelib.dir/settings.cpp.obj" \
+"CMakeFiles/gamelib.dir/sprite.cpp.obj" \
+"CMakeFiles/gamelib.dir/audio.cpp.obj" \
+"CMakeFiles/gamelib.dir/animatedsprite.cpp.obj" \
+"CMakeFiles/gamelib.dir/randomness.cpp.obj"
 
 # External object files for target gamelib
 gamelib_EXTERNAL_OBJECTS =
@@ -176,9 +320,18 @@ libgamelib.a: CMakeFiles/gamelib.dir/world.cpp.obj
 libgamelib.a: CMakeFiles/gamelib.dir/vec.cpp.obj
 libgamelib.a: CMakeFiles/gamelib.dir/camera.cpp.obj
 libgamelib.a: CMakeFiles/gamelib.dir/tilemap.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/physics.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/fsm.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/command.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/engine.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/settings.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/sprite.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/audio.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/animatedsprite.cpp.obj
+libgamelib.a: CMakeFiles/gamelib.dir/randomness.cpp.obj
 libgamelib.a: CMakeFiles/gamelib.dir/build.make
 libgamelib.a: CMakeFiles/gamelib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libgamelib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library libgamelib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\gamelib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gamelib.dir\link.txt --verbose=$(VERBOSE)
 

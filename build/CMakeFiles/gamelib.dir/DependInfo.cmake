@@ -8,9 +8,18 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.cpp" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.cpp" "CMakeFiles/gamelib.dir/audio.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/audio.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/camera.cpp" "CMakeFiles/gamelib.dir/camera.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/camera.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp" "CMakeFiles/gamelib.dir/command.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/command.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/engine.cpp" "CMakeFiles/gamelib.dir/engine.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/engine.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.cpp" "CMakeFiles/gamelib.dir/fsm.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/fsm.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/graphics.cpp" "CMakeFiles/gamelib.dir/graphics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/graphics.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.cpp" "CMakeFiles/gamelib.dir/physics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/physics.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.cpp" "CMakeFiles/gamelib.dir/player.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/player.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/randomness.cpp" "CMakeFiles/gamelib.dir/randomness.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/randomness.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.cpp" "CMakeFiles/gamelib.dir/settings.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/settings.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.cpp" "CMakeFiles/gamelib.dir/sprite.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/sprite.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/tilemap.cpp" "CMakeFiles/gamelib.dir/tilemap.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/tilemap.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/vec.cpp" "CMakeFiles/gamelib.dir/vec.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/vec.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.cpp" "CMakeFiles/gamelib.dir/world.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/world.cpp.obj.d"

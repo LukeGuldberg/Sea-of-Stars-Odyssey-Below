@@ -94,6 +94,8 @@ main.exe: CMakeFiles/main.dir/main.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: libgamelib.a
 main.exe: C:/msys64/mingw64/lib/libSDL2.dll.a
+main.exe: C:/msys64/mingw64/lib/libSDL2_image.dll.a
+main.exe: C:/msys64/mingw64/lib/libSDL2_mixer.dll.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1
 main.exe: CMakeFiles/main.dir/link.txt

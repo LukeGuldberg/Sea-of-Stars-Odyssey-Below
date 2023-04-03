@@ -31,6 +31,51 @@
 },
 {
   "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\physics.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\physics.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\fsm.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\fsm.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\command.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\command.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\engine.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\engine.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/engine.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\settings.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\settings.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\sprite.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\sprite.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\audio.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\audio.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\animatedsprite.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\animatedsprite.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/gamelib.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\gamelib.dir\\randomness.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\randomness.cpp",
+  "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/randomness.cpp"
+},
+{
+  "directory": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/build",
   "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=c++17 -g -Wall -Wextra -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\lukeg\\code\\GameDev\\SDL-SDL2\\Super-Awesome-Platformer\\main.cpp",
   "file": "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/main.cpp"
 }

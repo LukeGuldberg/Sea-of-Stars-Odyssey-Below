@@ -2,21 +2,38 @@
 
 #include <SDL2/SDL.h>
 
+#include <memory>
+
+#include "command.h"
+#include "fsm.h"
 #include "graphics.h"
+#include "physics.h"
 #include "vec.h"
 
 // forward declaration
 class World;
+class Engine;
 
-class Player {
+class Player
+{
 public:
-    Player(const Vec<double>& position, const Vec<int>& size);
-    void handle_input(const SDL_Event& event);
-    void update(World& world, double dt);
+    Player(Engine &engine, const Vec<double> &position, const Vec<int> &size);
+    std::unique_ptr<Command> handle_input(const SDL_Event &event);
+    void update(Engine &engine, double dt);
     std::pair<Vec<double>, Color> get_sprite() const;
 
-private:
-    Vec<double> position;
+    Physics physics;
+    const double walk_acceleration = 18;
+    const double jump_velocity = 5;
+    const double crouch_acceleration = 10;
+    const double crouch_jump_acceleration = 7;
     Vec<int> size;
-    Vec<double> velocity, acceleration;
+    Color color{125, 0, 125, 255};
+    Sprite sprite;
+    AnimatedSprite standing;
+    AnimatedSprite running;
+    AnimatedSprite falling;
+    AnimatedSprite jumping;
+    std::unique_ptr<State> state;
+    std::unique_ptr<Command> next_command;
 };
