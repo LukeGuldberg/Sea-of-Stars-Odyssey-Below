@@ -1,34 +1,69 @@
 #pragma once
-
-class Player;
+#include <memory>
+#include <vector>
+#include <string>
+class Object;
 class World;
 class Engine;
 
-class Command {
+class Command
+{
 public:
     virtual ~Command() {}
-    virtual void execute(Player& player, Engine& engine) = 0;
+    virtual void execute(Object &object, Engine &engine) = 0;
 };
 
-class Stop : public Command {
+class Stop : public Command
+{
 public:
-    void execute(Player& player, Engine& engine) override;
+    void execute(Object &object, Engine &engine) override;
 };
 
-class Jump : public Command {
+class Jump : public Command
+{
 public:
     Jump(double velocity);
-    void execute(Player& player, Engine& engine) override;
+    void execute(Object &object, Engine &engine) override;
 
 private:
     double velocity;
 };
 
-class Run : public Command {
+class Run : public Command
+{
 public:
     Run(double acceleration);
-    void execute(Player& player, Engine& engine) override;
+    void execute(Object &object, Engine &engine) override;
 
 private:
     double acceleration;
 };
+
+class EndGame : public Command
+{
+public:
+    void execute(Object &object, Engine &engine) override;
+};
+
+class PlaySound : public Command
+{
+public:
+    PlaySound(std::string sound_name, bool is_background);
+    void execute(Object &object, Engine &engine) override;
+
+private:
+    std::string sound_name;
+    bool is_background;
+};
+
+class LoadLevel : public Command
+{
+public:
+    LoadLevel(const std::string &filename);
+    void execute(Object &object, Engine &engine);
+
+private:
+    std::string filename;
+};
+
+std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments);

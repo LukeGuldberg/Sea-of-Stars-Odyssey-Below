@@ -24,6 +24,5 @@ void Settings::load()
     load("screen_width", screen_width);
     load("screen_height", screen_height);
     load("tile_size", tile_size);
-    load("characters", characters);
-    load("sounds", sounds);
+    load("starting_level", starting_level);
 }

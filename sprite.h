@@ -13,5 +13,6 @@ public:
     Vec<int> shift{0, 0};    // pixels to shift by when displaying
     Vec<int> center{0, 0};   // position to rotate about
     double angle{0.0};       // angle of rotation
-    bool flip{false};        // whether to flip sprite horizontally
+    int number_of_frames;
+    bool flip{false}; // whether to flip sprite horizontally
 };

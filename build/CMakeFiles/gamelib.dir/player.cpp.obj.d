@@ -279,32 +279,13 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_memory_defs.h \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/execution_defs.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
- C:/msys64/mingw64/include/c++/12.2.0/functional \
- C:/msys64/mingw64/include/c++/12.2.0/bits/std_function.h \
- C:/msys64/mingw64/include/c++/12.2.0/unordered_map \
- C:/msys64/mingw64/include/c++/12.2.0/initializer_list \
- C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable_policy.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/enable_special_members.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/node_handle.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/unordered_map.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/range_access.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/erase_if.h \
  C:/msys64/mingw64/include/c++/12.2.0/vector \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/12.2.0/initializer_list \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/range_access.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc \
- C:/msys64/mingw64/include/c++/12.2.0/array \
- C:/msys64/mingw64/include/c++/12.2.0/compare \
- C:/msys64/mingw64/include/c++/12.2.0/bits/stl_algo.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/algorithmfwd.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/stl_heap.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/uniform_int_dist.h \
- C:/msys64/mingw64/include/c++/12.2.0/sstream \
- C:/msys64/mingw64/include/c++/12.2.0/istream \
- C:/msys64/mingw64/include/c++/12.2.0/ios \
+ C:/msys64/mingw64/include/c++/12.2.0/string \
  C:/msys64/mingw64/include/c++/12.2.0/bits/char_traits.h \
  C:/msys64/mingw64/include/c++/12.2.0/cstdint \
  C:/msys64/mingw64/include/c++/12.2.0/bits/localefwd.h \
@@ -312,9 +293,6 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/clocale \
  C:/msys64/mingw64/include/locale.h \
  C:/msys64/mingw64/include/c++/12.2.0/cctype \
- C:/msys64/mingw64/include/c++/12.2.0/bits/ios_base.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/locale_classes.h \
- C:/msys64/mingw64/include/c++/12.2.0/string \
  C:/msys64/mingw64/include/c++/12.2.0/bits/ostream_insert.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/cxxabi_forced.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/basic_string.h \
@@ -325,6 +303,28 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/cerrno \
  C:/msys64/mingw64/include/c++/12.2.0/bits/charconv.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/basic_string.tcc \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
+ C:/msys64/mingw64/include/c++/12.2.0/functional \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/std_function.h \
+ C:/msys64/mingw64/include/c++/12.2.0/unordered_map \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/hashtable_policy.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/enable_special_members.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/unordered_map.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/erase_if.h \
+ C:/msys64/mingw64/include/c++/12.2.0/array \
+ C:/msys64/mingw64/include/c++/12.2.0/compare \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/uniform_int_dist.h \
+ C:/msys64/mingw64/include/c++/12.2.0/sstream \
+ C:/msys64/mingw64/include/c++/12.2.0/istream \
+ C:/msys64/mingw64/include/c++/12.2.0/ios \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/ios_base.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/locale_classes.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/locale_classes.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/system_error \
  C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -348,6 +348,7 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\object.h \
  C:/msys64/mingw64/include/c++/12.2.0/algorithm \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.h \

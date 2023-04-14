@@ -12,12 +12,7 @@ public:
     std::string title;
     int screen_width, screen_height;
     int tile_size;
-
-    // sprites
-    std::string characters;
-
-    // sounds
-    std::string sounds;
+    std::string starting_level;
 
 private:
     void load();

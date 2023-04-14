@@ -9,12 +9,13 @@
 #include "graphics.h"
 #include "physics.h"
 #include "vec.h"
+#include "object.h"
 
 // forward declaration
 class World;
 class Engine;
 
-class Player
+class Player : public Object
 {
 public:
     Player(Engine &engine, const Vec<double> &position, const Vec<int> &size);
@@ -22,18 +23,13 @@ public:
     void update(Engine &engine, double dt);
     std::pair<Vec<double>, Color> get_sprite() const;
 
-    Physics physics;
     const double walk_acceleration = 18;
     const double jump_velocity = 5;
     const double crouch_acceleration = 10;
     const double crouch_jump_acceleration = 7;
     Vec<int> size;
     Color color{125, 0, 125, 255};
-    Sprite sprite;
-    AnimatedSprite standing;
-    AnimatedSprite running;
-    AnimatedSprite falling;
-    AnimatedSprite jumping;
+    AnimatedSprite standing, running, falling, jumping, stand_to_run;
     std::unique_ptr<State> state;
     std::unique_ptr<Command> next_command;
 };

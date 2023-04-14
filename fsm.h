@@ -39,6 +39,9 @@ public:
     std::unique_ptr<State> update(Player &player, Engine &engine,
                                   double dt) override;
     void enter(Player &player) override;
+    void exit(Player &player) override;
+
+    int falling_frame_count = 0;
 };
 
 class Running : public State
@@ -54,6 +57,7 @@ public:
 
 private:
     double acceleration;
+    int falling_frame_count;
 };
 
 // class Crouching : public State {

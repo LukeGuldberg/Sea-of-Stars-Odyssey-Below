@@ -21,6 +21,8 @@ Player::Player(Engine &engine, const Vec<double> &position,
 
     falling = engine.graphics.get_animated_sprite("woodcutter_falling", .25, false, false);
 
+    stand_to_run = engine.graphics.get_animated_sprite("woodcutter_stand_to_run", .25, false, false);
+
     sprite = standing.get_sprite();
 }
 

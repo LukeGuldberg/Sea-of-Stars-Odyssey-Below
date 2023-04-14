@@ -116,6 +116,7 @@ AnimatedSprite Graphics::get_animated_sprite(const std::string &sprite_name, dou
     if (sprites.size() > 1 && random_start)
     {
         // choose random start frame
+
         int starting_frame = randint(0, sprites.size() - 1);
         return AnimatedSprite{sprite, dt_per_frame, starting_frame};
     }

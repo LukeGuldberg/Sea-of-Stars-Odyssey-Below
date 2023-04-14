@@ -237,6 +237,54 @@ command.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/command.cpp.s
 .PHONY : command.cpp.s
 
+enemy.obj: enemy.cpp.obj
+.PHONY : enemy.obj
+
+# target to build an object file
+enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemy.cpp.obj
+.PHONY : enemy.cpp.obj
+
+enemy.i: enemy.cpp.i
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemy.cpp.i
+.PHONY : enemy.cpp.i
+
+enemy.s: enemy.cpp.s
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemy.cpp.s
+.PHONY : enemy.cpp.s
+
+enemytype.obj: enemytype.cpp.obj
+.PHONY : enemytype.obj
+
+# target to build an object file
+enemytype.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemytype.cpp.obj
+.PHONY : enemytype.cpp.obj
+
+enemytype.i: enemytype.cpp.i
+.PHONY : enemytype.i
+
+# target to preprocess a source file
+enemytype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemytype.cpp.i
+.PHONY : enemytype.cpp.i
+
+enemytype.s: enemytype.cpp.s
+.PHONY : enemytype.s
+
+# target to generate assembly for a file
+enemytype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/enemytype.cpp.s
+.PHONY : enemytype.cpp.s
+
 engine.obj: engine.cpp.obj
 .PHONY : engine.obj
 
@@ -309,6 +357,30 @@ graphics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/graphics.cpp.s
 .PHONY : graphics.cpp.s
 
+level.obj: level.cpp.obj
+.PHONY : level.obj
+
+# target to build an object file
+level.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/level.cpp.obj
+.PHONY : level.cpp.obj
+
+level.i: level.cpp.i
+.PHONY : level.i
+
+# target to preprocess a source file
+level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/level.cpp.i
+.PHONY : level.cpp.i
+
+level.s: level.cpp.s
+.PHONY : level.s
+
+# target to generate assembly for a file
+level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/level.cpp.s
+.PHONY : level.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -332,6 +404,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+object.obj: object.cpp.obj
+.PHONY : object.obj
+
+# target to build an object file
+object.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/object.cpp.obj
+.PHONY : object.cpp.obj
+
+object.i: object.cpp.i
+.PHONY : object.i
+
+# target to preprocess a source file
+object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/object.cpp.i
+.PHONY : object.cpp.i
+
+object.s: object.cpp.s
+.PHONY : object.s
+
+# target to generate assembly for a file
+object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/object.cpp.s
+.PHONY : object.cpp.s
 
 physics.obj: physics.cpp.obj
 .PHONY : physics.obj
@@ -547,6 +643,12 @@ help:
 	@echo ... command.obj
 	@echo ... command.i
 	@echo ... command.s
+	@echo ... enemy.obj
+	@echo ... enemy.i
+	@echo ... enemy.s
+	@echo ... enemytype.obj
+	@echo ... enemytype.i
+	@echo ... enemytype.s
 	@echo ... engine.obj
 	@echo ... engine.i
 	@echo ... engine.s
@@ -556,9 +658,15 @@ help:
 	@echo ... graphics.obj
 	@echo ... graphics.i
 	@echo ... graphics.s
+	@echo ... level.obj
+	@echo ... level.i
+	@echo ... level.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... object.obj
+	@echo ... object.i
+	@echo ... object.s
 	@echo ... physics.obj
 	@echo ... physics.i
 	@echo ... physics.s

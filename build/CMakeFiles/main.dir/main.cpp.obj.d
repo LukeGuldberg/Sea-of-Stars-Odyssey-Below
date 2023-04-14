@@ -349,5 +349,6 @@ CMakeFiles/main.dir/main.cpp.obj: \
  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\world.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\tilemap.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\settings.h

@@ -15,12 +15,13 @@ class Engine
 public:
     Engine(const Settings &settings);
 
-    void load_level();
+    void load_level(const std::string &level_filename);
     void run();
+    void stop();
     Audio audio;
     Graphics graphics;
     Camera camera;
-    World world;
+    std::shared_ptr<World> world;
 
     std::shared_ptr<Player> player;
 
