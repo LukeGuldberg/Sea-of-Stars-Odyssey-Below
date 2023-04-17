@@ -10,6 +10,11 @@ World::World(const Level &level)
     {
         tilemap(position.x, position.y) = tile;
     }
+
+    for (auto [position, type] : level.enemies)
+    {
+        enemies.push_back(std::make_shared<Enemy>(position, Vec<int>{1, 1}, type));
+    }
 }
 
 std::shared_ptr<Command> World::touch_tiles(const Player &player)

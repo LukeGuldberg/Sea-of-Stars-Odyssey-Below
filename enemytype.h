@@ -16,3 +16,4 @@ public:
 };
 
 EnemyType create_enemy_type(Graphics &graphics, std::string type_name, double walk_acceleration);
+std::unique_ptr<Command> default_behavior(Engine &, Enemy &enemy);

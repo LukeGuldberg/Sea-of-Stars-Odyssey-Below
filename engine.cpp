@@ -99,10 +99,26 @@ void Engine::input()
         // react to keypresses by moving
         player->handle_input(event);
     }
+    for (auto enemy : world->enemies)
+    {
+        auto command = enemy->next_action(*this);
+        if (command)
+        {
+            command->execute(*enemy, *this);
+        }
+    }
 }
 void Engine::update(double dt)
 {
     player->update(*this, dt);
+    for (auto enemy : world->enemies)
+    {
+        auto command = enemy->update(*this, dt);
+        if (command)
+        {
+            command->execute(*enemy, *this);
+        }
+    }
     camera.move_to(player->physics.position);
 
     // camera.update(dt);
@@ -118,6 +134,10 @@ void Engine::render()
     // camera.move_to(position);
     camera.render(position, color);
     camera.render(*player);
+    for (auto enemy : world->enemies)
+    {
+        camera.render(*enemy);
+    }
     // camera.render(position, player->sprite);
     graphics.update();
 }

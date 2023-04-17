@@ -1,11 +1,12 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-
+#include <memory>
 #include <vector>
 #include "command.h"
 #include "tilemap.h"
 #include "vec.h"
+#include "enemy.h"
 
 class Level;
 class Player;
@@ -24,4 +25,5 @@ public:
 
     Tilemap tilemap;
     std::vector<std::pair<Sprite, int>> backgrounds;
+    std::vector<std::shared_ptr<Enemy>> enemies;
 };

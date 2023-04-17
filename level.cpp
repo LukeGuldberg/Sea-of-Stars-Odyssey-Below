@@ -144,6 +144,21 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
             background.scale = scale;
             backgrounds.push_back({background, distance});
         }
+        else if (command == "enemy")
+        {
+            char symbol;
+            std::string type_name;
+            double acceleration;
+            ss >> symbol >> type_name >> acceleration;
+            if (!ss)
+            {
+                std::string msg = error_message(theme_filename, line_num, "unable to load enemy", line);
+                throw std::runtime_error(msg);
+            }
+            auto generate_enemy_type = [=](Graphics &graphics)
+            { return create_enemy_type(graphics, type_name, acceleration); };
+            enemy_types[symbol] = generate_enemy_type;
+        }
         else if (command == "tile")
         {
             char symbol;

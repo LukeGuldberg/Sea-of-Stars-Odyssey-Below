@@ -222,7 +222,7 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/SDL2/SDL_version.h \
  C:/msys64/mingw64/include/SDL2/SDL_locale.h \
  C:/msys64/mingw64/include/SDL2/SDL_misc.h \
- C:/msys64/mingw64/include/c++/12.2.0/vector \
+ C:/msys64/mingw64/include/c++/12.2.0/memory \
  C:/msys64/mingw64/include/c++/12.2.0/bits/allocator.h \
  C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/new_allocator.h \
@@ -233,19 +233,6 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_uninitialized.h \
  C:/msys64/mingw64/include/c++/12.2.0/ext/alloc_traits.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/alloc_traits.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/stl_vector.h \
- C:/msys64/mingw64/include/c++/12.2.0/initializer_list \
- C:/msys64/mingw64/include/c++/12.2.0/bits/stl_bvector.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/functional_hash.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/hash_bytes.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/refwrap.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/invoke.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/stl_function.h \
- C:/msys64/mingw64/include/c++/12.2.0/backward/binders.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/range_access.h \
- C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.h \
- C:/msys64/mingw64/include/c++/12.2.0/memory \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/align.h \
@@ -253,6 +240,11 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/uses_allocator.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/unique_ptr.h \
  C:/msys64/mingw64/include/c++/12.2.0/tuple \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/invoke.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_function.h \
+ C:/msys64/mingw64/include/c++/12.2.0/backward/binders.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/functional_hash.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/hash_bytes.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/shared_ptr.h \
  C:/msys64/mingw64/include/c++/12.2.0/iosfwd \
  C:/msys64/mingw64/include/c++/12.2.0/bits/stringfwd.h \
@@ -261,6 +253,7 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/shared_ptr_base.h \
  C:/msys64/mingw64/include/c++/12.2.0/typeinfo \
  C:/msys64/mingw64/include/c++/12.2.0/bits/allocated_ptr.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/refwrap.h \
  C:/msys64/mingw64/include/c++/12.2.0/ext/aligned_buffer.h \
  C:/msys64/mingw64/include/c++/12.2.0/ext/atomicity.h \
  C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -285,6 +278,13 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/backward/auto_ptr.h \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_memory_defs.h \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/execution_defs.h \
+ C:/msys64/mingw64/include/c++/12.2.0/vector \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/12.2.0/initializer_list \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/range_access.h \
+ C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\command.h \
  C:/msys64/mingw64/include/c++/12.2.0/string \
  C:/msys64/mingw64/include/c++/12.2.0/bits/char_traits.h \
  C:/msys64/mingw64/include/c++/12.2.0/cstdint \
@@ -345,11 +345,12 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/bits/istream.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/bits/sstream.tcc \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\level.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\enemy.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\object.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\enemytype.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\level.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\player.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\object.h
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h
