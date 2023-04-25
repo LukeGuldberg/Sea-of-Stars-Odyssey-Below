@@ -99,6 +99,11 @@ void Engine::input()
         // react to keypresses by moving
         player->handle_input(event);
     }
+
+    world->enemies.erase(std::remove_if(world->enemies.begin(), world->enemies.end(), [](std::shared_ptr<Enemy> enemy)
+                                        { return !enemy->combat.is_alive; }),
+                         world->enemies.end());
+
     for (auto enemy : world->enemies)
     {
         auto command = enemy->next_action(*this);
@@ -127,8 +132,8 @@ void Engine::render()
 {
     // draw the player and platforms
     graphics.clear();
-
-    camera.render(world->backgrounds);
+    Sprite sprite = world->backgrounds.front().first;
+    camera.render({0, world->tilemap.height}, sprite);
     auto [position, color] = player->get_sprite();
     camera.render(world->tilemap, grid_on);
     // camera.move_to(position);

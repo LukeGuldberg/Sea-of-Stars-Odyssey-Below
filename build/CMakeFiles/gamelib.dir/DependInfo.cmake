@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.cpp" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.cpp" "CMakeFiles/gamelib.dir/audio.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/audio.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/camera.cpp" "CMakeFiles/gamelib.dir/camera.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/camera.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.cpp" "CMakeFiles/gamelib.dir/combat.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/combat.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp" "CMakeFiles/gamelib.dir/command.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/command.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemy.cpp" "CMakeFiles/gamelib.dir/enemy.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/enemy.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.cpp" "CMakeFiles/gamelib.dir/enemytype.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/enemytype.cpp.obj.d"

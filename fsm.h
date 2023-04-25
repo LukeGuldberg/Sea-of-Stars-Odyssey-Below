@@ -77,3 +77,12 @@ private:
 //                                   double dt) override;
 //     void enter(Player& player) override;
 // };
+
+class AttackAll : public State
+{
+public:
+    std::unique_ptr<State> handle_input(Player &player,
+                                        const SDL_Event &event) override;
+    std::unique_ptr<State> update(Player &player, Engine &engine,
+                                  double dt) override;
+};

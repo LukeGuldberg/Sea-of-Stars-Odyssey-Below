@@ -349,6 +349,7 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\object.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\combat.h \
  C:/msys64/mingw64/include/c++/12.2.0/algorithm \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.h \

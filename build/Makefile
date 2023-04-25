@@ -213,6 +213,30 @@ camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
+combat.obj: combat.cpp.obj
+.PHONY : combat.obj
+
+# target to build an object file
+combat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/combat.cpp.obj
+.PHONY : combat.cpp.obj
+
+combat.i: combat.cpp.i
+.PHONY : combat.i
+
+# target to preprocess a source file
+combat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/combat.cpp.i
+.PHONY : combat.cpp.i
+
+combat.s: combat.cpp.s
+.PHONY : combat.s
+
+# target to generate assembly for a file
+combat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/combat.cpp.s
+.PHONY : combat.cpp.s
+
 command.obj: command.cpp.obj
 .PHONY : command.obj
 
@@ -640,6 +664,9 @@ help:
 	@echo ... camera.obj
 	@echo ... camera.i
 	@echo ... camera.s
+	@echo ... combat.obj
+	@echo ... combat.i
+	@echo ... combat.s
 	@echo ... command.obj
 	@echo ... command.i
 	@echo ... command.s

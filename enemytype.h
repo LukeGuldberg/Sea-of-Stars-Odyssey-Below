@@ -12,6 +12,7 @@ class EnemyType
 public:
     AnimatedSprite standing, running;
     double walk_acceleration;
+    int health, damage;
     std::function<std::unique_ptr<Command>(Engine &engine, Enemy &enemy)> behavior;
 };
 

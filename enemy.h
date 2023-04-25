@@ -5,7 +5,6 @@
 #include "command.h"
 
 class Engine;
-class EnemyType;
 
 class Enemy : public Object
 {

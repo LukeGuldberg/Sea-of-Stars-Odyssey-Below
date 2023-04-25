@@ -71,6 +71,7 @@ void Level::load(Graphics &graphics, Audio &audio)
             {
                 Vec<double> position{static_cast<double>(x), static_cast<double>(height - 1 - row)};
                 const EnemyType &type = eit->second(graphics);
+                std::cout << enemies.size() << '\n';
                 enemies.push_back({position, type});
             }
             else

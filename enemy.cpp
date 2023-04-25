@@ -5,6 +5,9 @@ Enemy::Enemy(const Vec<double> &position, const Vec<int> &size, EnemyType &type)
 {
     physics.position = position;
     physics.acceleration.x = type.walk_acceleration;
+    combat.health = type.health;
+    combat.max_health = type.health;
+    combat.attack_damage = type.damage;
     sprite = type.standing.get_sprite();
 }
 

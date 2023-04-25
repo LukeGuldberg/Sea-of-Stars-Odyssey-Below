@@ -1,5 +1,5 @@
 #include "animatedsprite.h"
-
+#include <iostream>
 AnimatedSprite::AnimatedSprite(const std::vector<Sprite> &sprites, double dt_per_frame, int starting_frame)
     : sprites{sprites}, dt_per_frame{dt_per_frame}, time{0}, current_frame{starting_frame} {}
 
@@ -44,6 +44,7 @@ void AnimatedSprite::reset()
 
 Sprite AnimatedSprite::get_sprite() const
 {
+    std::cout << current_frame << "\n";
     return sprites.at(current_frame);
 }
 

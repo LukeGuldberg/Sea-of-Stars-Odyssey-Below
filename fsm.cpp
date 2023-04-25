@@ -67,6 +67,10 @@ std::unique_ptr<State> Standing::handle_input(Player &player,
         // else if (key == SDLK_LCTRL) {
         //     return std::make_unique<Crouching>();
         // }
+        else if (key == SDLK_q)
+        {
+            return std::make_unique<AttackAll>();
+        }
     }
     return nullptr;
 }
@@ -274,3 +278,30 @@ void Running::exit(Player &player)
 // void Crouching::enter(Player& player) {
 
 // }
+
+//////////////////
+/// AttackAll
+//////////////////
+
+std::unique_ptr<State> AttackAll::handle_input(Player &player,
+                                               const SDL_Event &event)
+{
+    if (event.type == SDL_KEYUP)
+    {
+        SDL_Keycode key = event.key.keysym.sym;
+        if (key == SDLK_q)
+        {
+            return std::make_unique<Standing>();
+        }
+    }
+    return nullptr;
+}
+std::unique_ptr<State> AttackAll::update(Player &player, Engine &engine,
+                                         double dt)
+{
+    for (auto enemy : engine.world->enemies)
+    {
+        player.combat.attack(*enemy);
+    }
+    return std::make_unique<Standing>();
+}

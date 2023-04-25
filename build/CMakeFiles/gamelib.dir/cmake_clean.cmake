@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gamelib.dir/audio.cpp.obj.d"
   "CMakeFiles/gamelib.dir/camera.cpp.obj"
   "CMakeFiles/gamelib.dir/camera.cpp.obj.d"
+  "CMakeFiles/gamelib.dir/combat.cpp.obj"
+  "CMakeFiles/gamelib.dir/combat.cpp.obj.d"
   "CMakeFiles/gamelib.dir/command.cpp.obj"
   "CMakeFiles/gamelib.dir/command.cpp.obj.d"
   "CMakeFiles/gamelib.dir/enemy.cpp.obj"
