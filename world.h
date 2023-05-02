@@ -7,6 +7,7 @@
 #include "tilemap.h"
 #include "vec.h"
 #include "enemy.h"
+#include "quadtree.h"
 
 class Level;
 class Player;
@@ -26,4 +27,8 @@ public:
     Tilemap tilemap;
     std::vector<std::pair<Sprite, int>> backgrounds;
     std::vector<std::shared_ptr<Enemy>> enemies;
+
+    void build_quadtree();
+
+    QuadTree quadtree;
 };

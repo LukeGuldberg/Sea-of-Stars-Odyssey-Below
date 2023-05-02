@@ -1,17 +1,25 @@
 #include "enemytype.h"
 #include "enemy.h"
 
-EnemyType create_enemy_type(Graphics &graphics, std::string type_name, double walk_acceleration)
+EnemyType create_enemy_type(Graphics &graphics, std::string type_name)
 {
-    EnemyType type;
-    type.walk_acceleration = walk_acceleration;
-    type.standing = graphics.get_animated_sprite(type_name + "_standing", 0.5, true, false);
-    type.running = graphics.get_animated_sprite(type_name + "_running", 0.5, true, false);
-    type.behavior = default_behavior;
-
-    return type;
+    if (type_name == "shark")
+    {
+        return create_shark(graphics);
+    }
+    else if (type_name == "crab")
+    {
+        return create_crab(graphics);
+    }
+    else if (type_name == "octopus")
+    {
+        return create_octopus(graphics);
+    }
+    else
+    {
+        throw std::runtime_error("Unknown enemy type: " + type_name);
+    }
 }
-
 std::unique_ptr<Command> default_behavior(Engine &, Enemy &enemy)
 {
     if (abs(enemy.last_edge_position.x - enemy.physics.position.x) > 20)
@@ -20,4 +28,28 @@ std::unique_ptr<Command> default_behavior(Engine &, Enemy &enemy)
         enemy.physics.acceleration.x = -enemy.physics.acceleration.x;
     }
     return std::make_unique<Run>(enemy.physics.acceleration.x);
+}
+std::unique_ptr<Command> standing_behavior(Engine &, Enemy &)
+{
+    return std::make_unique<Stop>();
+}
+EnemyType create_shark(Graphics &graphics)
+{
+    Vec<double> acceleration{2, 0};
+    AnimatedSprite sprite = graphics.get_animated_sprite("shark_swimming", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 8, 2, default_behavior};
+    //    return EnemyType{sprite, death_sprite, attack_sprite, acceleration, 8, 2, default_behavior};
+    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^implement
+}
+EnemyType create_crab(Graphics &graphics)
+{
+    Vec<double> acceleration{2, 0};
+    AnimatedSprite sprite = graphics.get_animated_sprite("crab_swimming", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 8, 2, default_behavior};
+}
+EnemyType create_octopus(Graphics &graphics)
+{
+    Vec<double> acceleration{2, 0};
+    AnimatedSprite sprite = graphics.get_animated_sprite("octopus_swimming", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 5, 3, default_behavior};
 }

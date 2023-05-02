@@ -501,6 +501,30 @@ player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.s
 .PHONY : player.cpp.s
 
+quadtree.obj: quadtree.cpp.obj
+.PHONY : quadtree.obj
+
+# target to build an object file
+quadtree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/quadtree.cpp.obj
+.PHONY : quadtree.cpp.obj
+
+quadtree.i: quadtree.cpp.i
+.PHONY : quadtree.i
+
+# target to preprocess a source file
+quadtree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/quadtree.cpp.i
+.PHONY : quadtree.cpp.i
+
+quadtree.s: quadtree.cpp.s
+.PHONY : quadtree.s
+
+# target to generate assembly for a file
+quadtree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/quadtree.cpp.s
+.PHONY : quadtree.cpp.s
+
 randomness.obj: randomness.cpp.obj
 .PHONY : randomness.obj
 
@@ -700,6 +724,9 @@ help:
 	@echo ... player.obj
 	@echo ... player.i
 	@echo ... player.s
+	@echo ... quadtree.obj
+	@echo ... quadtree.i
+	@echo ... quadtree.s
 	@echo ... randomness.obj
 	@echo ... randomness.i
 	@echo ... randomness.s

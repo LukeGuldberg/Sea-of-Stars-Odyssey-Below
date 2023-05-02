@@ -352,6 +352,7 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\enemytype.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\quadtree.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\level.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\player.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h

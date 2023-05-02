@@ -302,6 +302,13 @@ std::unique_ptr<State> AttackAll::update(Player &player, Engine &engine,
     for (auto enemy : engine.world->enemies)
     {
         player.combat.attack(*enemy);
+        // if (enemy.get()->combat.health <= 0)
+        // {
+        //     enemy.get()->sprite = enemy.get()->death_animation;
+        // }
+        // else {
+        //     enemy.get()->sprite = enemy.get()->take_damage;
+        // }
     }
     return std::make_unique<Standing>();
 }

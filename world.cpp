@@ -4,7 +4,7 @@
 #include <array>
 #include <cmath>
 World::World(const Level &level)
-    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}
+    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}, quadtree{AABB{{level.width / 2.0, level.height / 2.0}, {level.width / 2.0, level.height / 2.0}}}
 {
     for (auto [position, tile] : level.tiles)
     {
@@ -137,4 +137,14 @@ bool World::collides(const Vec<double> &position) const
     int x = std::floor(position.x);
     int y = std::floor(position.y);
     return tilemap(x, y).blocking;
+}
+
+void World::build_quadtree()
+{
+    quadtree.clear();
+
+    for (std::shared_ptr<Enemy> enemy : enemies)
+    {
+        quadtree.insert(enemy.get());
+    }
 }

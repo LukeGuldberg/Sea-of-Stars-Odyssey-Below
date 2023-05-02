@@ -44,7 +44,6 @@ void AnimatedSprite::reset()
 
 Sprite AnimatedSprite::get_sprite() const
 {
-    std::cout << current_frame << "\n";
     return sprites.at(current_frame);
 }
 

@@ -127,6 +127,40 @@ void Engine::update(double dt)
     camera.move_to(player->physics.position);
 
     // camera.update(dt);
+
+    for (auto enemy : world->enemies)
+    {
+        auto command = enemy->next_action(*this);
+        if (command)
+        {
+            command->execute(*enemy, *this);
+        }
+    }
+
+    // handle collisions between enemy and player
+    world->build_quadtree();
+    AABB player_box{player->physics.position, {1.0 * player->size.x, 1.0 * player->size.y}};
+    std::vector<Object *> enemies = world->quadtree.query_range(player_box);
+
+    if (enemies.size() > 0)
+    {
+        auto enemy = enemies.front();
+        enemy->combat.attack(*player);
+        // enter the hurting state
+    }
+
+    // end game if player is dead
+
+    if (!player->combat.is_alive)
+    {
+        EndGame endgame;
+        endgame.execute(*player, *this);
+        return;
+    }
+
+    world->enemies.erase(std::remove_if(world->enemies.begin(), world->enemies.end(), [](std::shared_ptr<Enemy> enemy)
+                                        { return !enemy->combat.is_alive; }),
+                         world->enemies.end());
 }
 void Engine::render()
 {

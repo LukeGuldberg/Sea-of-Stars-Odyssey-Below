@@ -157,7 +157,7 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
                 throw std::runtime_error(msg);
             }
             auto generate_enemy_type = [=](Graphics &graphics)
-            { return create_enemy_type(graphics, type_name, acceleration); };
+            { return create_enemy_type(graphics, type_name); };
             enemy_types[symbol] = generate_enemy_type;
         }
         else if (command == "tile")

@@ -14,8 +14,9 @@ void Camera::move_to(const Vec<double> &new_location)
 {
     location.x = new_location.x;
     location.y = new_location.y;
-    location.y =
-        std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
+    location.y = std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
+    location.x = std::clamp(location.x, 14.0, static_cast<double>(visible_max.x));
+    location.x = std::clamp(location.x, -14.0, static_cast<double>(visible_max.x));
     calculate_visible_tiles();
 }
 
