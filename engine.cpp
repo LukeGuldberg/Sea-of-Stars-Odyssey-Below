@@ -24,27 +24,7 @@ void Engine::load_level(const std::string &level_filename)
     // move camera to start position
     camera.move_to(player->physics.position);
 }
-//     // boundary walls
-//     world.add_platform(0, 0, 30, 1);
-//     world.add_platform(0, 0, 1, 16);
-//     world.add_platform(30, 0, 1, 16);
-//     world.add_platform(0, 15, 30, 1);
 
-//     // platforms
-//     world.add_platform(3, 7, 4, 1);
-//     world.add_platform(13, 4, 6, 1);
-
-//     // add player
-//     player =
-//         std::make_shared<Player>(*this, Vec<double>{10, 4}, Vec<int>{1, 1});
-
-//     // move camera
-//     camera.move_to(player->physics.position);
-//     // std::queue<std::pair<double, std::unique_ptr<Command>>> script;
-//     // script.push({3, std::make_unique<Accelerate>(40)});
-//     // script.push({5, std::make_unique<Accelerate>(40)});
-//     // script.push({7, std::make_unique<Accelerate>(40)});
-// }
 void Engine::run()
 {
     running = true;
@@ -115,6 +95,7 @@ void Engine::input()
 }
 void Engine::update(double dt)
 {
+    world->animated_background.update(dt);
     player->update(*this, dt);
     for (auto enemy : world->enemies)
     {
@@ -166,8 +147,8 @@ void Engine::render()
 {
     // draw the player and platforms
     graphics.clear();
-    Sprite sprite = world->backgrounds.front().first;
-    camera.render({0, world->tilemap.height}, sprite);
+    camera.render(world->backgrounds, *this);         // added
+    camera.render(world->animated_background, *this); // added
     auto [position, color] = player->get_sprite();
     camera.render(world->tilemap, grid_on);
     // camera.move_to(position);

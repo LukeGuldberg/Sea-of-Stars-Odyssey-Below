@@ -5,6 +5,8 @@
 #include "graphics.h"
 #include "object.h"
 #include "tilemap.h"
+#include "engine.h"
+#include "animatedsprite.h"
 Camera::Camera(Graphics &graphics, int tilesize)
     : graphics{graphics}, tilesize{tilesize}
 {
@@ -14,17 +16,18 @@ void Camera::move_to(const Vec<double> &new_location)
 {
     location.x = new_location.x;
     location.y = new_location.y;
-    location.y = std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
+    // location.y = std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
+    location.y = std::clamp(location.y, 5.0, static_cast<double>(12));
+
     location.x = std::clamp(location.x, 14.0, static_cast<double>(visible_max.x));
     location.x = std::clamp(location.x, -14.0, static_cast<double>(visible_max.x));
+
     calculate_visible_tiles();
 }
 
 Vec<int> Camera::world_to_screen(const Vec<double> &world_position) const
 {
-    Vec<double> scaled =
-        (world_position - location) *
-        static_cast<double>(tilesize); // mapping my location to pixel location
+    Vec<double> scaled = (world_position - location) * static_cast<double>(tilesize); // mapping my location to pixel location
     Vec<int> pixel{static_cast<int>(scaled.x), static_cast<int>(scaled.y)};
 
     // shift to the center of the screen
@@ -69,13 +72,13 @@ void Camera::render(const Tilemap &tilemap, bool grid_on) const
     }
 }
 
-void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds) const
+void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds, const Engine &engine) const
 {
+    auto pos = engine.camera.world_to_screen({0, 36});
+
     for (auto [sprite, distance] : backgrounds)
     {
-        // int shift = static_cast<int>(location.x / distance);
-        // graphics.draw_sprite({-shift, 0}, sprite);
-        graphics.draw_sprite({0, 0}, sprite);
+        graphics.draw_sprite({pos.x, pos.y}, sprite);
     }
 }
 
@@ -92,6 +95,14 @@ void Camera::render(const Object &object) const
     // render(object.physics.position, object.color);
     render(object.physics.position, object.sprite);
 }
+
+void Camera::render(const AnimatedSprite &animatedsprite, const Engine &engine) const
+{
+    auto pos = engine.camera.world_to_screen({0, 18});
+    // graphics.draw_sprite({engine.camera.visible_min.x, engine.camera.visible_min.y}, animatedsprite.get_sprite());
+    graphics.draw_sprite({pos.x, pos.y}, animatedsprite.get_sprite());
+}
+
 void Camera::calculate_visible_tiles()
 {
     // number of tiles visible(plus one for the edges)

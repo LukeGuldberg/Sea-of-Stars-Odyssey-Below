@@ -21,8 +21,8 @@ public:
     Audio audio;
     Graphics graphics;
     Camera camera;
-    std::shared_ptr<World> world;
 
+    std::shared_ptr<World> world;
     std::shared_ptr<Player> player;
 
 private:

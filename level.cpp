@@ -145,6 +145,25 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
             background.scale = scale;
             backgrounds.push_back({background, distance});
         }
+        else if (command == "animated_background")
+        {
+            std::string file1, file2, file3;
+            int scale;
+            ss >> file1 >> file2 >> file3 >> scale;
+            if (!ss)
+            {
+                std::string msg = error_message(theme_filename, line_num, "Unable to load background", line);
+                throw std::runtime_error(msg);
+            }
+            Sprite bg1 = graphics.load_image("assets/" + file1);
+            Sprite bg2 = graphics.load_image("assets/" + file2);
+            Sprite bg3 = graphics.load_image("assets/" + file3);
+            bg1.scale = scale;
+            bg2.scale = scale;
+            bg3.scale = scale;
+            std::vector<Sprite> animated_backgrounds = {bg1, bg2, bg3};
+            animated_background = {animated_backgrounds, .20};
+        }
         else if (command == "enemy")
         {
             char symbol;

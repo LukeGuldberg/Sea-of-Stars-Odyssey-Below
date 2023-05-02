@@ -10,7 +10,7 @@ class Engine;
 class EnemyType
 {
 public:
-    AnimatedSprite animation;
+    AnimatedSprite animation, death_sprite, attack_sprite, attacked_sprite;
     Vec<double> acceleration;
     int health, damage;
     std::function<std::unique_ptr<Command>(Engine &engine, Enemy &enemy)> behavior;

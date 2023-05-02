@@ -26,6 +26,7 @@ public:
 
     Tilemap tilemap;
     std::vector<std::pair<Sprite, int>> backgrounds;
+    AnimatedSprite animated_background;
     std::vector<std::shared_ptr<Enemy>> enemies;
 
     void build_quadtree();

@@ -27,8 +27,7 @@ public:
     std::vector<std::pair<Vec<double>, EnemyType>> enemies;
 
     std::vector<std::pair<Sprite, int>> backgrounds;
-    // AnimatedSprite animated_background;
-    // int is distance (how far away the background is)
+    AnimatedSprite animated_background;
 
 private:
     void load(Graphics &graphics, Audio &audio);

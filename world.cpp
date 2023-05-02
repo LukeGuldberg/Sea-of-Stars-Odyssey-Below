@@ -4,7 +4,7 @@
 #include <array>
 #include <cmath>
 World::World(const Level &level)
-    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}, quadtree{AABB{{level.width / 2.0, level.height / 2.0}, {level.width / 2.0, level.height / 2.0}}}
+    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}, animated_background{level.animated_background}, quadtree{AABB{{level.width / 2.0, level.height / 2.0}, {level.width / 2.0, level.height / 2.0}}}
 {
     for (auto [position, tile] : level.tiles)
     {

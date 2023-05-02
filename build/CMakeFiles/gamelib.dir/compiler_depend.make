@@ -850,7 +850,14 @@ CMakeFiles/gamelib.dir/camera.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Supe
   C:/msys64/mingw64/include/c++/12.2.0/bits/atomic_base.h \
   C:/msys64/mingw64/include/c++/12.2.0/bits/atomic_lockfree_defines.h \
   C:/msys64/mingw64/include/c++/12.2.0/backward/auto_ptr.h \
-  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_memory_defs.h
+  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_memory_defs.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/engine.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.h \
+  C:/msys64/mingw64/include/SDL2/SDL_mixer.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemy.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h
 
 CMakeFiles/gamelib.dir/combat.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.cpp \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.h \
@@ -5676,11 +5683,11 @@ C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.cpp:
 
 C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemy.cpp:
 
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp:
+
 C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h:
 
 C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.h:
-
-C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.cpp:
 
 C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_memory_defs.h:
 

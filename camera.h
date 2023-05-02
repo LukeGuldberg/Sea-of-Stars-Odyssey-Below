@@ -7,6 +7,8 @@ class Graphics;
 class Tilemap;
 class Sprite;
 class Object;
+class Engine;
+class AnimatedSprite;
 
 class Camera
 {
@@ -20,8 +22,9 @@ public:
                 bool filled = true) const;
     void render(const Tilemap &tilemap, bool grid_on = false) const;
     void render(const Vec<double> &position, const Sprite &sprite) const;
-    void render(const std::vector<std::pair<Sprite, int>> &backgrounds) const;
+    void render(const std::vector<std::pair<Sprite, int>> &backgrounds, const Engine &engine) const;
     void render(const Object &object) const;
+    void render(const AnimatedSprite &animatedsprite, const Engine &engine) const;
 
 private:
     Graphics &graphics;
