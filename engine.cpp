@@ -5,6 +5,8 @@
 #include "player.h"
 #include "settings.h"
 #include "level.h"
+#include "projectile.h"
+
 Engine::Engine(const Settings &settings)
     : graphics{settings.title, settings.screen_width, settings.screen_height},
       camera{graphics, settings.tile_size}
@@ -127,7 +129,9 @@ void Engine::update(double dt)
     {
         auto enemy = enemies.front();
         enemy->combat.attack(*player);
-        // enter the hurting state
+        player->state->exit(*player);
+        player->state = std::make_unique<Hurting>(0.0);
+        player->state->enter(*player);
     }
 
     // end game if player is dead
@@ -145,19 +149,21 @@ void Engine::update(double dt)
 }
 void Engine::render()
 {
-    // draw the player and platforms
+
     graphics.clear();
-    camera.render(world->backgrounds, *this);         // added
-    camera.render(world->animated_background, *this); // added
-    auto [position, color] = player->get_sprite();
+    camera.render(world->backgrounds, *this, player.get()->physics.position);
+    camera.render(world->animated_background, *this);
+
     camera.render(world->tilemap, grid_on);
-    // camera.move_to(position);
-    camera.render(position, color);
     camera.render(*player);
     for (auto enemy : world->enemies)
     {
         camera.render(*enemy);
     }
-    // camera.render(position, player->sprite);
+    for (auto &projectile : world->projectiles)
+    {
+        camera.render(projectile);
+    }
+
     graphics.update();
 }

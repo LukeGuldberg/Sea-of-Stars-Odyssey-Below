@@ -358,11 +358,12 @@ CMakeFiles/main.dir/main.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/command.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/tilemap.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemy.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/object.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/tilemap.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemy.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.h
@@ -717,6 +718,8 @@ C:/msys64/mingw64/include/c++/12.2.0/bits/streambuf.tcc:
 C:/msys64/mingw64/include/c++/12.2.0/stdlib.h:
 
 C:/msys64/mingw64/include/c++/12.2.0/pstl/pstl_config.h:
+
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.h:
 
 C:/msys64/mingw64/include/SDL2/SDL_main.h:
 

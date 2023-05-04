@@ -10,6 +10,7 @@
 #include "physics.h"
 #include "vec.h"
 #include "object.h"
+#include "projectile.h"
 
 // forward declaration
 class World;
@@ -29,7 +30,9 @@ public:
     const double crouch_jump_acceleration = 7;
     Vec<int> size;
     Color color{125, 0, 125, 255};
-    AnimatedSprite standing, running, falling, jumping, stand_to_run;
+    AnimatedSprite standing, running, falling, jumping, standing_dmg, jumping_dmg, running_dmg;
     std::unique_ptr<State> state;
     std::unique_ptr<Command> next_command;
+
+    Projectile arrow;
 };

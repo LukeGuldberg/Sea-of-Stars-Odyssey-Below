@@ -501,6 +501,30 @@ player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/player.cpp.s
 .PHONY : player.cpp.s
 
+projectile.obj: projectile.cpp.obj
+.PHONY : projectile.obj
+
+# target to build an object file
+projectile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/projectile.cpp.obj
+.PHONY : projectile.cpp.obj
+
+projectile.i: projectile.cpp.i
+.PHONY : projectile.i
+
+# target to preprocess a source file
+projectile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/projectile.cpp.i
+.PHONY : projectile.cpp.i
+
+projectile.s: projectile.cpp.s
+.PHONY : projectile.s
+
+# target to generate assembly for a file
+projectile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/projectile.cpp.s
+.PHONY : projectile.cpp.s
+
 quadtree.obj: quadtree.cpp.obj
 .PHONY : quadtree.obj
 
@@ -724,6 +748,9 @@ help:
 	@echo ... player.obj
 	@echo ... player.i
 	@echo ... player.s
+	@echo ... projectile.obj
+	@echo ... projectile.i
+	@echo ... projectile.s
 	@echo ... quadtree.obj
 	@echo ... quadtree.i
 	@echo ... quadtree.s

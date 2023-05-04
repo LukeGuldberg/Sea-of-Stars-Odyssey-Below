@@ -31,6 +31,17 @@ public:
     void enter(Player &player) override;
 };
 
+class Standing_Hurt : public State
+{
+public:
+    std::unique_ptr<State> handle_input(Player &player,
+                                        const SDL_Event &event) override;
+    bool on_platform(const Player &player, const World &world);
+    std::unique_ptr<State> update(Player &player, Engine &engine,
+                                  double dt) override;
+    void enter(Player &player) override;
+};
+
 class Jumping : public State
 {
 public:
@@ -60,24 +71,6 @@ private:
     int falling_frame_count;
 };
 
-// class Crouching : public State {
-// public:
-//     std::unique_ptr<State> handle_input(Player& player,
-//                                         const SDL_Event& event) override;
-//     std::unique_ptr<State> update(Player& player, World& world,
-//                                   double dt) override;
-//     void enter(Player& player) override;
-// };
-
-// class Sinking : public State {
-// public:
-//     std::unique_ptr<State> handle_input(Player& player,
-//                                         const SDL_Event& event) override;
-//     std::unique_ptr<State> update(Player& player, World& world,
-//                                   double dt) override;
-//     void enter(Player& player) override;
-// };
-
 class AttackAll : public State
 {
 public:
@@ -85,4 +78,42 @@ public:
                                         const SDL_Event &event) override;
     std::unique_ptr<State> update(Player &player, Engine &engine,
                                   double dt) override;
+};
+class Hurting : public State
+{
+public:
+    Hurting(double elapsed_time);
+    std::unique_ptr<State> handle_input(Player &player, const SDL_Event &event) override;
+    std::unique_ptr<State> update(Player &player, Engine &engine, double dt) override;
+    void enter(Player &player) override;
+    void exit(Player &player) override;
+
+    double elapsed_time;
+    const double cooldown{2};
+};
+
+class Running_Hurt : public State
+{
+public:
+    Running_Hurt(double acceleration, double elapsed_time);
+    std::unique_ptr<State> handle_input(Player &player, const SDL_Event &event) override;
+    std::unique_ptr<State> update(Player &player, Engine &engine, double dt) override;
+    void enter(Player &player) override;
+    void exit(Player &player) override;
+
+    double acceleration;
+    double elapsed_time;
+    const double cooldown{2};
+};
+class Jumping_Hurt : public State
+{
+public:
+    Jumping_Hurt(double elapsed_time);
+    std::unique_ptr<State> handle_input(Player &player, const SDL_Event &event) override;
+    std::unique_ptr<State> update(Player &player, Engine &engine, double dt) override;
+    void enter(Player &player) override;
+    void exit(Player &player) override;
+
+    double elapsed_time;
+    const double cooldown{2};
 };

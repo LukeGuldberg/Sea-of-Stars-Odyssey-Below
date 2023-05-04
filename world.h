@@ -28,6 +28,7 @@ public:
     std::vector<std::pair<Sprite, int>> backgrounds;
     AnimatedSprite animated_background;
     std::vector<std::shared_ptr<Enemy>> enemies;
+    std::vector<Projectile> projectiles;
 
     void build_quadtree();
 

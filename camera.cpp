@@ -17,7 +17,8 @@ void Camera::move_to(const Vec<double> &new_location)
     location.x = new_location.x;
     location.y = new_location.y;
     // location.y = std::clamp(location.y, 5.0, static_cast<double>(visible_max.y));
-    location.y = std::clamp(location.y, 5.0, static_cast<double>(12));
+    // location.y = std::clamp(location.y, 5.0, 12.0);
+    location.y = std::clamp(location.y, 5.0, static_cast<double>(graphics.height));
 
     location.x = std::clamp(location.x, 14.0, static_cast<double>(visible_max.x));
     location.x = std::clamp(location.x, -14.0, static_cast<double>(visible_max.x));
@@ -72,10 +73,9 @@ void Camera::render(const Tilemap &tilemap, bool grid_on) const
     }
 }
 
-void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds, const Engine &engine) const
+void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds, const Engine &engine, Vec<double> position) const
 {
-    auto pos = engine.camera.world_to_screen({0, 36});
-
+    auto pos = engine.camera.world_to_screen({position.x - 12, 22});
     for (auto [sprite, distance] : backgrounds)
     {
         graphics.draw_sprite({pos.x, pos.y}, sprite);
@@ -85,21 +85,18 @@ void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds, cons
 void Camera::render(const Vec<double> &position, const Sprite &sprite) const
 {
     Vec<int> pixel = world_to_screen(position);
-    pixel.y +=
-        tilesize / 2; // shift sprite's bottom center down to bottom of tile
+    pixel.y += tilesize / 2; // shift sprite's bottom center down to bottom of tile
     graphics.draw_sprite(pixel, sprite);
 }
 
 void Camera::render(const Object &object) const
 {
-    // render(object.physics.position, object.color);
     render(object.physics.position, object.sprite);
 }
 
 void Camera::render(const AnimatedSprite &animatedsprite, const Engine &engine) const
 {
     auto pos = engine.camera.world_to_screen({0, 18});
-    // graphics.draw_sprite({engine.camera.visible_min.x, engine.camera.visible_min.y}, animatedsprite.get_sprite());
     graphics.draw_sprite({pos.x, pos.y}, animatedsprite.get_sprite());
 }
 

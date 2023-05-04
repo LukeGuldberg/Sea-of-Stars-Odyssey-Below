@@ -11,8 +11,8 @@ Player::Player(Engine &engine, const Vec<double> &position,
     : size{size}
 {
     physics.position = position;
-    combat.health = 5;
-    combat.max_health = 5;
+    combat.health = 100;
+    combat.max_health = 100;
     combat.attack_damage = 3;
     state = std::make_unique<Standing>();
     state->enter(*this);
@@ -24,9 +24,17 @@ Player::Player(Engine &engine, const Vec<double> &position,
 
     falling = engine.graphics.get_animated_sprite("woodcutter_falling", .25, false, false);
 
-    stand_to_run = engine.graphics.get_animated_sprite("woodcutter_stand_to_run", .25, false, false);
+    standing_dmg = engine.graphics.get_animated_sprite("woodcutter_standing_dmg", .25, false, false);
+
+    running_dmg = engine.graphics.get_animated_sprite("woodcutter_swimming_dmg", .25, false, false);
+
+    jumping_dmg = engine.graphics.get_animated_sprite("woodcutter_jumping_dmg", .25, false, false);
 
     sprite = standing.get_sprite();
+
+    arrow.sprite = engine.graphics.get_sprite("arrow");
+    arrow.combat.invincible = true;
+    arrow.combat.attack_damage = 1;
 }
 
 // vel += accel * dt

@@ -27,6 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gamelib.dir/physics.cpp.obj.d"
   "CMakeFiles/gamelib.dir/player.cpp.obj"
   "CMakeFiles/gamelib.dir/player.cpp.obj.d"
+  "CMakeFiles/gamelib.dir/projectile.cpp.obj"
+  "CMakeFiles/gamelib.dir/projectile.cpp.obj.d"
   "CMakeFiles/gamelib.dir/quadtree.cpp.obj"
   "CMakeFiles/gamelib.dir/quadtree.cpp.obj.d"
   "CMakeFiles/gamelib.dir/randomness.cpp.obj"

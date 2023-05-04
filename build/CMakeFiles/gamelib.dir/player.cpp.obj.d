@@ -303,7 +303,6 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/cerrno \
  C:/msys64/mingw64/include/c++/12.2.0/bits/charconv.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/basic_string.tcc \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
  C:/msys64/mingw64/include/c++/12.2.0/functional \
  C:/msys64/mingw64/include/c++/12.2.0/bits/std_function.h \
@@ -344,12 +343,14 @@ CMakeFiles/gamelib.dir/player.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/bits/istream.tcc \
  C:/msys64/mingw64/include/c++/12.2.0/bits/sstream.tcc \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
- C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/sprite.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\projectile.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\object.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\physics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\sprite.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\combat.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\graphics.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\animatedsprite.h \
  C:/msys64/mingw64/include/c++/12.2.0/algorithm \
  C:/msys64/mingw64/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.h \

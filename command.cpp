@@ -2,7 +2,9 @@
 
 #include "engine.h"
 #include "object.h"
+#include "projectile.h"
 #include "world.h"
+#include "vec.h"
 ////////////////////
 // Stop
 ////////////////////
@@ -36,6 +38,20 @@ void Run::execute(Object &object, Engine &engine)
     // object.color = {255, 0, 0, 255};
     object.physics.acceleration.x = acceleration;
     engine.audio.play_sound("swimming");
+}
+/////////////
+// Projectile
+////////////
+FireProjectile::FireProjectile(Projectile projectile, Vec<double> position, Vec<double> velocity)
+    : projectile{projectile}
+{
+    this->projectile.physics.position = position;
+    this->projectile.physics.velocity = velocity;
+    this->projectile.physics.acceleration.y = gravity;
+}
+void FireProjectile::execute(Object &, Engine &engine)
+{
+    engine.world->projectiles.push_back(projectile);
 }
 
 /////////////////

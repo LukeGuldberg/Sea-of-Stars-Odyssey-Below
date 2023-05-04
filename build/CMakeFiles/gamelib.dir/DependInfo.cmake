@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/object.cpp" "CMakeFiles/gamelib.dir/object.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/object.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.cpp" "CMakeFiles/gamelib.dir/physics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/physics.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.cpp" "CMakeFiles/gamelib.dir/player.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/player.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.cpp" "CMakeFiles/gamelib.dir/projectile.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/projectile.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.cpp" "CMakeFiles/gamelib.dir/quadtree.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/quadtree.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/randomness.cpp" "CMakeFiles/gamelib.dir/randomness.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/randomness.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.cpp" "CMakeFiles/gamelib.dir/settings.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/settings.cpp.obj.d"

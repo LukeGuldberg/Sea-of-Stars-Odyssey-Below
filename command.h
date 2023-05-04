@@ -2,6 +2,8 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include "vec.h"
+#include "projectile.h"
 class Object;
 class World;
 class Engine;
@@ -37,6 +39,16 @@ public:
 
 private:
     double acceleration;
+};
+
+class FireProjectile : public Command
+{
+public:
+    FireProjectile(Projectile projectile, Vec<double> position, Vec<double> velocity);
+    void execute(Object &object, Engine &engine) override;
+
+private:
+    Projectile projectile;
 };
 
 class EndGame : public Command
