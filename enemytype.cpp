@@ -33,6 +33,11 @@ std::unique_ptr<Command> standing_behavior(Engine &, Enemy &)
 {
     return std::make_unique<Stop>();
 }
+
+std::unique_ptr<Command> hurting(Engine &engine, Enemy &enemy)
+{
+    return std::make_unique<Stop>();
+}
 EnemyType create_shark(Graphics &graphics)
 {
     Vec<double> acceleration{2, 0};
@@ -40,7 +45,7 @@ EnemyType create_shark(Graphics &graphics)
     AnimatedSprite death_sprite = graphics.get_animated_sprite("shark_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("shark_attack", 0.15, true, false);
     AnimatedSprite attacked_sprite = graphics.get_animated_sprite("shark_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, default_behavior};
+    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, 2, 0, default_behavior};
     //    return EnemyType{sprite, death_sprite, attack_sprite, acceleration, 8, 2, default_behavior};
     //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^implement
 }
@@ -51,7 +56,7 @@ EnemyType create_crab(Graphics &graphics)
     AnimatedSprite death_sprite = graphics.get_animated_sprite("crab_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("crab_attack", 0.15, true, false);
     AnimatedSprite attacked_sprite = graphics.get_animated_sprite("crab_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, default_behavior};
+    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, 2, 0, default_behavior};
 }
 EnemyType create_octopus(Graphics &graphics)
 {
@@ -60,5 +65,5 @@ EnemyType create_octopus(Graphics &graphics)
     AnimatedSprite death_sprite = graphics.get_animated_sprite("octopus_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("octopus_attack", 0.15, true, false);
     AnimatedSprite attacked_sprite = graphics.get_animated_sprite("octopus_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 5, 3, default_behavior};
+    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 5, 3, 2, 0, default_behavior};
 }

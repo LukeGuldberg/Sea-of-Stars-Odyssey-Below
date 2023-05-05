@@ -31,6 +31,7 @@ public:
     std::vector<Projectile> projectiles;
 
     void build_quadtree();
+    void remove_inactive();
 
     QuadTree quadtree;
 };

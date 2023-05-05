@@ -74,7 +74,7 @@ LoadLevel::LoadLevel(const std::string &filename)
 
 void LoadLevel::execute(Object &, Engine &engine)
 {
-    engine.load_level("assets/" + filename);
+    engine.next_level = "assets\n" + filename;
 }
 
 std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments)

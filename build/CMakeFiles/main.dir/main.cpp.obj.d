@@ -307,6 +307,7 @@ CMakeFiles/main.dir/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/12.2.0/bits/node_handle.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/unordered_map.h \
  C:/msys64/mingw64/include/c++/12.2.0/bits/erase_if.h \
+ C:/msys64/mingw64/include/c++/12.2.0/optional \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\camera.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\vec.h \
  C:/msys64/mingw64/include/c++/12.2.0/functional \

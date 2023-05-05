@@ -100,11 +100,31 @@ void Camera::render(const AnimatedSprite &animatedsprite, const Engine &engine) 
     graphics.draw_sprite({pos.x, pos.y}, animatedsprite.get_sprite());
 }
 
+void Camera::render_life(int life, int max_life)
+{
+    Sprite heart = graphics.get_sprite("heart");
+    Sprite empty_heart = graphics.get_sprite("empty_heart");
+
+    for (int i = 0; i < life; ++i)
+    {
+        Vec<int> position{35, 65};
+        position.x += i * 64 + 10;
+        graphics.draw_sprite(position, heart);
+    }
+
+    for (int i = life; i < max_life; ++i)
+    {
+        Vec<int> position{35, 65};
+        position.x += i * 64 + 10;
+        graphics.draw_sprite(position, empty_heart);
+    }
+}
+
 void Camera::calculate_visible_tiles()
 {
     // number of tiles visible(plus one for the edges)
     Vec<int> num_tiles =
-        Vec{graphics.width, graphics.height} / (tilesize * 2) + Vec{1, 1};
+        Vec{graphics.width, graphics.height} / (tilesize * 2) + Vec{7, 7};
     Vec<int> center{static_cast<int>(location.x), static_cast<int>(location.y)};
     visible_max = center + num_tiles;
     visible_min = center - num_tiles;

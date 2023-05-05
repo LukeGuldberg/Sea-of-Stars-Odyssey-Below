@@ -17,7 +17,7 @@ Engine::Engine(const Settings &settings)
 void Engine::load_level(const std::string &level_filename)
 {
     Level level{level_filename, graphics, audio};
-    audio.play_sound("background", true);
+    // audio.play_sound("background", true);
     world = std::make_shared<World>(level);
 
     // load player
@@ -36,6 +36,11 @@ void Engine::run()
     double lag{0.0};
     while (running)
     {
+        if (next_level)
+        {
+            load_level(next_level.value());
+            next_level.reset();
+        }
         auto current = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = current - previous;
         previous = current;
@@ -82,9 +87,7 @@ void Engine::input()
         player->handle_input(event);
     }
 
-    world->enemies.erase(std::remove_if(world->enemies.begin(), world->enemies.end(), [](std::shared_ptr<Enemy> enemy)
-                                        { return !enemy->combat.is_alive; }),
-                         world->enemies.end());
+    world->remove_inactive();
 
     for (auto enemy : world->enemies)
     {
@@ -99,6 +102,7 @@ void Engine::update(double dt)
 {
     world->animated_background.update(dt);
     player->update(*this, dt);
+
     for (auto enemy : world->enemies)
     {
         auto command = enemy->update(*this, dt);
@@ -109,16 +113,12 @@ void Engine::update(double dt)
     }
     camera.move_to(player->physics.position);
 
-    // camera.update(dt);
-
-    for (auto enemy : world->enemies)
+    for (auto &projectile : world->projectiles)
     {
-        auto command = enemy->next_action(*this);
-        if (command)
-        {
-            command->execute(*enemy, *this);
-        }
+        projectile.update(*this, dt);
     }
+
+    // camera.update(dt);
 
     // handle collisions between enemy and player
     world->build_quadtree();
@@ -136,6 +136,16 @@ void Engine::update(double dt)
 
     // end game if player is dead
 
+    for (auto &projectile : world->projectiles)
+    {
+        AABB projectile_box{projectile.physics.position, {1.0 * projectile.size.x, 1.0 * projectile.size.y}};
+        std::vector<Object *> enemies = world->quadtree.query_range(projectile_box);
+        for (auto enemy : enemies)
+        {
+            projectile.combat.attack(*enemy);
+        }
+    }
+
     if (!player->combat.is_alive)
     {
         EndGame endgame;
@@ -143,9 +153,7 @@ void Engine::update(double dt)
         return;
     }
 
-    world->enemies.erase(std::remove_if(world->enemies.begin(), world->enemies.end(), [](std::shared_ptr<Enemy> enemy)
-                                        { return !enemy->combat.is_alive; }),
-                         world->enemies.end());
+    world->remove_inactive();
 }
 void Engine::render()
 {
@@ -155,6 +163,7 @@ void Engine::render()
     camera.render(world->animated_background, *this);
 
     camera.render(world->tilemap, grid_on);
+    camera.render_life(player->combat.health, player->combat.max_health);
     camera.render(*player);
     for (auto enemy : world->enemies)
     {

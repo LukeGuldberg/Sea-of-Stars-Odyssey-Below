@@ -26,6 +26,8 @@ public:
     void render(const Object &object) const;
     void render(const AnimatedSprite &animatedsprite, const Engine &engine) const;
 
+    void render_life(int life, int max_life);
+
 private:
     Graphics &graphics;
     int tilesize;

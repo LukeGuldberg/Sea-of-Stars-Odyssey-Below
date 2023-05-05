@@ -97,7 +97,7 @@ std::unique_ptr<State> Standing::update(Player &player, Engine &engine,
                                         double dt)
 {
     State::update(player, engine, dt);
-    player.physics.velocity.x *= player.physics.damping; // physics::damp()
+    player.physics.velocity.x *= damping; // physics::damp()
     player.standing.update(dt);
     player.sprite = player.standing.get_sprite();
     return nullptr;
@@ -145,7 +145,7 @@ std::unique_ptr<State> Jumping::update(Player &player, Engine &engine,
     State::update(player, engine, dt);
     player.jumping.update(dt);
 
-    if (falling_frame_count < 60) // I know this is bad and will fix it
+    if (falling_frame_count < 60)
     {
         player.falling.update(dt);
     }
@@ -214,37 +214,43 @@ std::unique_ptr<State> Running::update(Player &player, Engine &engine,
                                        double dt)
 {
     State::update(player, engine, dt);
-    player.physics.apply_friction(player.physics.damping); // friction
+    player.physics.apply_friction(damping); // friction
     player.running.update(dt);
 
-    if (falling_frame_count < 100) // I know this is bad and will fix it
+    // if (!on_platform(player, *engine.world))
+    if (player.physics.velocity.y > -2)
     {
-        player.falling.update(dt);
-    }
-
-    if (!on_platform(player, *engine.world))
-    {
-        falling_frame_count++;
-        player.sprite = player.falling.get_sprite();
+        player.sprite = player.running.get_sprite();
     }
     else
     {
-        player.sprite = player.running.get_sprite();
+        falling_frame_count++;
+        if (falling_frame_count < 45)
+        {
+            player.falling.update(dt);
+        }
+        player.sprite = player.falling.get_sprite();
     }
     return nullptr;
 }
 
 void Running::enter(Player &player)
 {
+    player.falling.reset();
     player.next_command = std::make_unique<Run>(acceleration);
     player.running.flip(acceleration < 0);
     player.falling.flip(acceleration < 0);
+    falling_frame_count = 0;
+    int angle = 5;
+    int max_angle = 60;
+    player.falling.rotate(angle, max_angle);
 }
 
 void Running::exit(Player &player)
 {
     player.physics.acceleration.x = 0;
     falling_frame_count = 0;
+    player.falling.reset();
 }
 
 //////////////////
@@ -319,7 +325,7 @@ std::unique_ptr<State> Hurting::handle_input(Player &player, const SDL_Event &ev
 std::unique_ptr<State> Hurting::update(Player &player, Engine &engine, double dt)
 {
     State::update(player, engine, dt);
-    player.physics.apply_friction(player.physics.damping);
+    player.physics.apply_friction(damping);
     player.standing_dmg.update(dt);
     elapsed_time += dt;
     if (elapsed_time >= cooldown)
@@ -371,7 +377,7 @@ std::unique_ptr<State> Running_Hurt::handle_input(Player &, const SDL_Event &eve
 std::unique_ptr<State> Running_Hurt::update(Player &player, Engine &engine, double dt)
 {
     State::update(player, engine, dt);
-    player.physics.apply_friction(player.physics.damping);
+    player.physics.apply_friction(damping);
     player.running_dmg.update(dt);
     elapsed_time += dt;
     if (elapsed_time >= cooldown)
@@ -398,6 +404,7 @@ void Running_Hurt::exit(Player &player)
 // Jumping_Hurt
 ////////////////
 Jumping_Hurt::Jumping_Hurt(double elapsed_time) : elapsed_time{elapsed_time} {}
+
 std::unique_ptr<State> Jumping_Hurt::handle_input(Player &player, const SDL_Event &event)
 {
     if (event.type == SDL_KEYDOWN)
@@ -422,7 +429,6 @@ std::unique_ptr<State> Jumping_Hurt::update(Player &player, Engine &engine, doub
 {
     State::update(player, engine, dt);
     player.jumping_dmg.update(dt);
-    player.physics.apply_friction(player.physics.damping);
 
     if (on_platform(player, *engine.world))
     {
@@ -438,7 +444,7 @@ std::unique_ptr<State> Jumping_Hurt::update(Player &player, Engine &engine, doub
 void Jumping_Hurt::enter(Player &player)
 {
     player.next_command = std::make_unique<Jump>(player.jump_velocity);
-    player.jumping.flip(player.sprite.flip);
+    player.jumping_dmg.flip(player.sprite.flip);
     player.combat.invincible = true;
 }
 void Jumping_Hurt::exit(Player &player)

@@ -11,6 +11,7 @@ void Combat::take_damage(int attack_damage)
     {
         return;
     }
+    invincible = true;
     health -= attack_damage;
     if (health <= 0)
     {
