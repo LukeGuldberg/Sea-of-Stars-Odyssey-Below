@@ -85,20 +85,27 @@ std::vector<Object *> QuadTree::query_range(AABB range) const
         return {};
     }
 
-    // handle leaf nodes
+    // handle leaf node
     std::vector<Object *> results;
     if (north_west == nullptr)
     {
         std::copy_if(std::begin(objects), std::end(objects), std::back_inserter(results),
-                     [&](const Object *object)
+                     [&](Object *object)
                      {
                          return range.contains(object->physics.position);
                      });
         return results;
     }
 
-    // handle parent nodes
     // add objects from children
     auto pts = north_west->query_range(range);
     results.insert(std::end(results), std::begin(pts), std::end(pts));
+    pts = north_east->query_range(range);
+    results.insert(std::end(results), std::begin(pts), std::end(pts));
+    pts = south_west->query_range(range);
+    results.insert(std::end(results), std::begin(pts), std::end(pts));
+    pts = south_east->query_range(range);
+    results.insert(std::end(results), std::begin(pts), std::end(pts));
+
+    return results;
 }

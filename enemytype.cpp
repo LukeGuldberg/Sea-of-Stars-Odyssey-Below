@@ -34,13 +34,13 @@ std::unique_ptr<Command> standing_behavior(Engine &, Enemy &)
     return std::make_unique<Stop>();
 }
 
-std::unique_ptr<Command> hurting(Engine &engine, Enemy &enemy)
+std::unique_ptr<Command> hurting(Engine &, Enemy &)
 {
     return std::make_unique<Stop>();
 }
 EnemyType create_shark(Graphics &graphics)
 {
-    Vec<double> acceleration{2, 0};
+    Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("shark_swimming", 0.15, true, false);
     AnimatedSprite death_sprite = graphics.get_animated_sprite("shark_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("shark_attack", 0.15, true, false);
@@ -51,7 +51,7 @@ EnemyType create_shark(Graphics &graphics)
 }
 EnemyType create_crab(Graphics &graphics)
 {
-    Vec<double> acceleration{2, 0};
+    Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("crab_swimming", 0.15, true, false);
     AnimatedSprite death_sprite = graphics.get_animated_sprite("crab_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("crab_attack", 0.15, true, false);
@@ -60,7 +60,7 @@ EnemyType create_crab(Graphics &graphics)
 }
 EnemyType create_octopus(Graphics &graphics)
 {
-    Vec<double> acceleration{2, 0};
+    Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("octopus_swimming", 0.15, true, false);
     AnimatedSprite death_sprite = graphics.get_animated_sprite("octopus_death", 0.15, true, false);
     AnimatedSprite attack_sprite = graphics.get_animated_sprite("octopus_attack", 0.15, true, false);

@@ -6,6 +6,7 @@
 #include "settings.h"
 #include "level.h"
 #include "projectile.h"
+#include "loadscreen.h"
 
 Engine::Engine(const Settings &settings)
     : graphics{settings.title, settings.screen_width, settings.screen_height},
@@ -55,6 +56,23 @@ void Engine::run()
         }
         render();
     }
+    setup_end_screen();
+
+    while (running)
+    {
+        SDL_Event event;
+        while (SDL_PollEvent(&event))
+        {
+            if (event.type == SDL_QUIT)
+            { // closing the window
+                running = false;
+                break;
+            }
+        }
+        graphics.clear();
+        camera.render(world->backgrounds);
+        graphics.update();
+    }
 }
 
 void Engine::stop()
@@ -102,7 +120,10 @@ void Engine::update(double dt)
 {
     world->animated_background.update(dt);
     player->update(*this, dt);
-
+    for (auto &animated_object : world->animated_objects)
+    {
+        animated_object.update(*this, dt);
+    }
     for (auto enemy : world->enemies)
     {
         auto command = enemy->update(*this, dt);
@@ -164,10 +185,15 @@ void Engine::render()
 
     camera.render(world->tilemap, grid_on);
     camera.render_life(player->combat.health, player->combat.max_health);
+    camera.render_stars(player->stars_found, player->max_stars);
     camera.render(*player);
     for (auto enemy : world->enemies)
     {
         camera.render(*enemy);
+    }
+    for (auto animated_object : world->animated_objects)
+    {
+        camera.render(animated_object.position, animated_object.type.animation.get_sprite());
     }
     for (auto &projectile : world->projectiles)
     {
@@ -175,4 +201,19 @@ void Engine::render()
     }
 
     graphics.update();
+}
+void Engine::setup_end_screen()
+{
+    if (player->combat.is_alive)
+    {
+        running = true;
+        Loadscreen game_over{"assets/game-won.txt", graphics, audio};
+        world->backgrounds = game_over.backgrounds;
+    }
+    else
+    {
+        running = true;
+        Loadscreen game_over{"assets/game-lost.txt", graphics, audio};
+        world->backgrounds = game_over.backgrounds;
+    }
 }

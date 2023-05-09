@@ -100,31 +100,6 @@ Sprite Graphics::get_sprite(const std::string &name) const
     return i->second.front();
 }
 
-// AnimatedSprite Graphics::get_animated_sprite(const std::string &sprite_name, double dt_per_frame, bool random_start, bool shuffle_order)
-// {
-//     auto i = sprites.find(sprite_name);
-//     if (i == sprites.end())
-//     {
-//         throw std::runtime_error("Cannot find animated sprite " + sprite_name);
-//     }
-//     std::vector<Sprite> sprite = i->second;
-//     if (shuffle_order)
-//     {
-//         shuffle(std::begin(sprite), std::end(sprite));
-//     }
-
-//     if (sprites.size() > 1 && random_start)
-//     {
-//         // choose random start frame
-
-//         int starting_frame = randint(0, sprites.size() - 1);
-//         return AnimatedSprite{sprite, dt_per_frame, starting_frame};
-//     }
-//     else
-//     {
-//         return AnimatedSprite{sprite, dt_per_frame};
-//     }
-// }
 AnimatedSprite Graphics::get_animated_sprite(const std::string &name, double dt_per_frame, bool random_start, bool shuffle_order) const
 {
     auto i = sprites.find(name);

@@ -1,6 +1,7 @@
 #include "level.h"
 #include "graphics.h"
 #include "audio.h"
+#include "objecttype.h"
 #include <fstream>
 #include <algorithm>
 #include <iostream>
@@ -39,8 +40,8 @@ void Level::load(Graphics &graphics, Audio &audio)
     width = lines.front().size();
 
     // ensure rectangular
-    bool rectangular = std::all_of(std::begin(lines), std::end(lines), [=](const std::string &line)
-                                   { return static_cast<int>(line.size()) == width; });
+    // bool rectangular = std::all_of(std::begin(lines), std::end(lines), [=](const std::string &line)
+    //                                { return static_cast<int>(line.size()) == width; });
     // error handling!
 
     for (int row = 0; row < height; ++row)
@@ -52,14 +53,27 @@ void Level::load(Graphics &graphics, Audio &audio)
             {
                 continue;
             }
-            if (symbol == 'P')
+            else if (symbol == 'P')
             { // player's starting position
                 player_start_location = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 continue;
             }
+            else if (symbol == '*')
+            {
+                Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
+                animated_objects.push_back(std::pair(pos, create_object_type(graphics, "star")));
+            }
+            else if (symbol == '$')
+            {
+                Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
+                animated_objects.push_back(std::pair(pos, create_object_type(graphics, "coin")));
+                continue;
+            }
+
             // determine the tile type
             auto it = tile_types.find(symbol);
             auto eit = enemy_types.find(symbol);
+
             if (it != tile_types.end())
             {
                 Vec<int> position{x, height - row - 1};
@@ -205,10 +219,21 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
             }
             tile_types[symbol] = tile;
         }
-        else
+        else if (command == "animated_object")
         {
-            std::string msg = error_message(theme_filename, line_num, "Unknown command", line);
-            throw std::runtime_error(msg);
+            char symbol;
+            std::string sprite_name;
+            ss >> symbol >> sprite_name;
+            if (!ss)
+            {
+                std::string msg = error_message(theme_filename, line_num, "unable to load enemy", line);
+                throw std::runtime_error(msg);
+            }
+            else
+            {
+                std::string msg = error_message(theme_filename, line_num, "Unknown command", line);
+                throw std::runtime_error(msg);
+            }
         }
     }
 }

@@ -94,10 +94,25 @@ void Camera::render(const Object &object) const
     render(object.physics.position, object.sprite);
 }
 
+// void Camera::render(Vec<double> position, AnimatedSprite &animatedsprite)
+// { // draw animated objects
+//     auto pos = engine.camera.world_to_screen(position);
+//     graphics.draw_sprite(pos, animatedsprite.get_sprite());
+// }
+
 void Camera::render(const AnimatedSprite &animatedsprite, const Engine &engine) const
 {
     auto pos = engine.camera.world_to_screen({0, 18});
     graphics.draw_sprite({pos.x, pos.y}, animatedsprite.get_sprite());
+}
+
+void Camera::render(const std::vector<std::pair<Sprite, int>> &backgrounds) const
+{
+    for (auto [sprite, distance] : backgrounds)
+    {
+        int shift = static_cast<int>(location.x / distance);
+        graphics.draw_sprite({-shift, 0}, sprite);
+    }
 }
 
 void Camera::render_life(int life, int max_life)
@@ -117,6 +132,25 @@ void Camera::render_life(int life, int max_life)
         Vec<int> position{35, 65};
         position.x += i * 64 + 10;
         graphics.draw_sprite(position, empty_heart);
+    }
+}
+
+void Camera::render_stars(int stars, int max_stars)
+{
+    Sprite star = graphics.get_sprite("star");
+    Sprite empty_star = graphics.get_sprite("empty_star");
+
+    for (int i = 0; i < stars; ++i)
+    {
+        Vec<int> position{900, 100};
+        position.x += i * 64 + 10;
+        graphics.draw_sprite(position, star);
+    }
+    for (int i = 0; i < max_stars; ++i)
+    {
+        Vec<int> position{900, 100};
+        position.x += i * 64 + 10;
+        graphics.draw_sprite(position, empty_star);
     }
 }
 

@@ -34,4 +34,5 @@ private:
     void input();
     void update(double dt);
     void render();
+    void setup_end_screen();
 };

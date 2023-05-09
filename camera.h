@@ -24,9 +24,12 @@ public:
     void render(const Vec<double> &position, const Sprite &sprite) const;
     void render(const std::vector<std::pair<Sprite, int>> &backgrounds, const Engine &engine, Vec<double> position) const;
     void render(const Object &object) const;
+    void render(Vec<double> position, AnimatedSprite &animatedsprite);
     void render(const AnimatedSprite &animatedsprite, const Engine &engine) const;
+    void render(const std::vector<std::pair<Sprite, int>> &backgrounds) const;
 
     void render_life(int life, int max_life);
+    void render_stars(int stars, int max_stars);
 
 private:
     Graphics &graphics;

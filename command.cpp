@@ -5,6 +5,7 @@
 #include "projectile.h"
 #include "world.h"
 #include "vec.h"
+#include "player.h"
 ////////////////////
 // Stop
 ////////////////////
@@ -74,7 +75,18 @@ LoadLevel::LoadLevel(const std::string &filename)
 
 void LoadLevel::execute(Object &, Engine &engine)
 {
-    engine.next_level = "assets\n" + filename;
+    if (engine.player->stars_found == engine.player->max_stars)
+    {
+        engine.next_level = "assets\n" + filename;
+    }
+}
+
+void StarFound::execute(Object &object, Engine &engine)
+{
+    if (engine.player->stars_found < engine.player->max_stars)
+    {
+        engine.player->stars_found++;
+    }
 }
 
 std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments)
@@ -96,6 +108,10 @@ std::shared_ptr<Command> create_command(std::string command_name, std::vector<st
             throw std::runtime_error("load_level must be followed by a level filename");
         }
         return std::make_shared<LoadLevel>(arguments.front());
+    }
+    else if (command_name == "star_found")
+    {
+        return std::make_shared<StarFound>();
     }
 
     throw std::runtime_error("Unknown command: " + command_name);

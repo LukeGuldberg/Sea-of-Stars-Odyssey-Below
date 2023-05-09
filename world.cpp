@@ -15,6 +15,10 @@ World::World(const Level &level)
     {
         enemies.push_back(std::make_shared<Enemy>(position, Vec<int>{1, 1}, type));
     }
+    for (auto [position, type] : level.animated_objects)
+    {
+        animated_objects.push_back(AnimatedObject{position, Vec{1, 1}, type});
+    }
 }
 
 std::shared_ptr<Command> World::touch_tiles(const Player &player)
@@ -26,7 +30,16 @@ std::shared_ptr<Command> World::touch_tiles(const Player &player)
     for (const Vec<int> &displacemnt : displacemnts)
     {
         Tile &tile = tilemap(x + displacemnt.x, y + displacemnt.y);
-        if (tile.command)
+        if (tile.command == std::shared_ptr<LoadLevel>())
+        {
+            if (player.stars_found == player.max_stars)
+            {
+                auto command = tile.command;
+                tile.command = nullptr;
+                return command;
+            }
+        }
+        else if (tile.command)
         {
             auto command = tile.command;
             tile.command = nullptr;

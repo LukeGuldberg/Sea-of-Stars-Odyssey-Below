@@ -8,6 +8,7 @@
 #include "vec.h"
 #include "enemy.h"
 #include "quadtree.h"
+#include "animatedobject.h"
 
 class Level;
 class Player;
@@ -29,6 +30,7 @@ public:
     AnimatedSprite animated_background;
     std::vector<std::shared_ptr<Enemy>> enemies;
     std::vector<Projectile> projectiles;
+    std::vector<AnimatedObject> animated_objects;
 
     void build_quadtree();
     void remove_inactive();

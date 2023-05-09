@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.cpp" "CMakeFiles/gamelib.dir/animatedobject.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/animatedobject.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedsprite.cpp" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/animatedsprite.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.cpp" "CMakeFiles/gamelib.dir/audio.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/audio.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/camera.cpp" "CMakeFiles/gamelib.dir/camera.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/camera.cpp.obj.d"
@@ -19,7 +20,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.cpp" "CMakeFiles/gamelib.dir/fsm.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/fsm.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/graphics.cpp" "CMakeFiles/gamelib.dir/graphics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/graphics.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.cpp" "CMakeFiles/gamelib.dir/level.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/level.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/loadscreen.cpp" "CMakeFiles/gamelib.dir/loadscreen.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/loadscreen.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/object.cpp" "CMakeFiles/gamelib.dir/object.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/object.cpp.obj.d"
+  "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.cpp" "CMakeFiles/gamelib.dir/objecttype.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/objecttype.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/physics.cpp" "CMakeFiles/gamelib.dir/physics.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/physics.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.cpp" "CMakeFiles/gamelib.dir/player.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/player.cpp.obj.d"
   "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.cpp" "CMakeFiles/gamelib.dir/projectile.cpp.obj" "gcc" "CMakeFiles/gamelib.dir/projectile.cpp.obj.d"

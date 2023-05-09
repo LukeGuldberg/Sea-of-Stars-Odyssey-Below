@@ -315,7 +315,7 @@ std::unique_ptr<State> Hurting::handle_input(Player &player, const SDL_Event &ev
     if (event.type == SDL_KEYUP)
     {
         SDL_Keycode key = event.key.keysym.sym;
-        if (key == SDLK_LEFT || SDLK_RIGHT)
+        if (key == SDLK_LEFT || key == SDLK_RIGHT)
         {
             return std::make_unique<Hurting>(elapsed_time);
         }

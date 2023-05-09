@@ -17,7 +17,7 @@ std::unique_ptr<Command> Enemy::update(Engine &engine, double dt)
 {
     Physics old = physics;
     physics.update(dt);
-    // physics.apply_friction(damping);
+    physics.apply_friction(damping);
     // Check for collisions
     // attempt to move in x
     Vec<double> future{physics.position.x, old.position.y};

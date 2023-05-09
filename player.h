@@ -35,4 +35,7 @@ public:
     std::unique_ptr<Command> next_command;
 
     Projectile arrow;
+
+    int stars_found{0};
+    int max_stars{3};
 };

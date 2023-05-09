@@ -141,6 +141,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+animatedobject.obj: animatedobject.cpp.obj
+.PHONY : animatedobject.obj
+
+# target to build an object file
+animatedobject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/animatedobject.cpp.obj
+.PHONY : animatedobject.cpp.obj
+
+animatedobject.i: animatedobject.cpp.i
+.PHONY : animatedobject.i
+
+# target to preprocess a source file
+animatedobject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/animatedobject.cpp.i
+.PHONY : animatedobject.cpp.i
+
+animatedobject.s: animatedobject.cpp.s
+.PHONY : animatedobject.s
+
+# target to generate assembly for a file
+animatedobject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/animatedobject.cpp.s
+.PHONY : animatedobject.cpp.s
+
 animatedsprite.obj: animatedsprite.cpp.obj
 .PHONY : animatedsprite.obj
 
@@ -405,6 +429,30 @@ level.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/level.cpp.s
 .PHONY : level.cpp.s
 
+loadscreen.obj: loadscreen.cpp.obj
+.PHONY : loadscreen.obj
+
+# target to build an object file
+loadscreen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/loadscreen.cpp.obj
+.PHONY : loadscreen.cpp.obj
+
+loadscreen.i: loadscreen.cpp.i
+.PHONY : loadscreen.i
+
+# target to preprocess a source file
+loadscreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/loadscreen.cpp.i
+.PHONY : loadscreen.cpp.i
+
+loadscreen.s: loadscreen.cpp.s
+.PHONY : loadscreen.s
+
+# target to generate assembly for a file
+loadscreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/loadscreen.cpp.s
+.PHONY : loadscreen.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -452,6 +500,30 @@ object.s: object.cpp.s
 object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/object.cpp.s
 .PHONY : object.cpp.s
+
+objecttype.obj: objecttype.cpp.obj
+.PHONY : objecttype.obj
+
+# target to build an object file
+objecttype.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/objecttype.cpp.obj
+.PHONY : objecttype.cpp.obj
+
+objecttype.i: objecttype.cpp.i
+.PHONY : objecttype.i
+
+# target to preprocess a source file
+objecttype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/objecttype.cpp.i
+.PHONY : objecttype.cpp.i
+
+objecttype.s: objecttype.cpp.s
+.PHONY : objecttype.s
+
+# target to generate assembly for a file
+objecttype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gamelib.dir\build.make CMakeFiles/gamelib.dir/objecttype.cpp.s
+.PHONY : objecttype.cpp.s
 
 physics.obj: physics.cpp.obj
 .PHONY : physics.obj
@@ -703,6 +775,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... gamelib
 	@echo ... main
+	@echo ... animatedobject.obj
+	@echo ... animatedobject.i
+	@echo ... animatedobject.s
 	@echo ... animatedsprite.obj
 	@echo ... animatedsprite.i
 	@echo ... animatedsprite.s
@@ -736,12 +811,18 @@ help:
 	@echo ... level.obj
 	@echo ... level.i
 	@echo ... level.s
+	@echo ... loadscreen.obj
+	@echo ... loadscreen.i
+	@echo ... loadscreen.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... object.obj
 	@echo ... object.i
 	@echo ... object.s
+	@echo ... objecttype.obj
+	@echo ... objecttype.i
+	@echo ... objecttype.s
 	@echo ... physics.obj
 	@echo ... physics.i
 	@echo ... physics.s

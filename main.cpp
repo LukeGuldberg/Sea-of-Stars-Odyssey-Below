@@ -4,7 +4,8 @@
 #include "engine.h"
 #include "settings.h"
 
-int main() {
+int main()
+{
     Settings settings{
         "C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-"
         "Platformer/settings.txt"};
