@@ -75,18 +75,33 @@ LoadLevel::LoadLevel(const std::string &filename)
 
 void LoadLevel::execute(Object &, Engine &engine)
 {
-    if (engine.player->stars_found == engine.player->max_stars)
-    {
-        engine.next_level = "assets\n" + filename;
-    }
+    engine.next_level = "assets\n" + filename;
 }
 
 void StarFound::execute(Object &object, Engine &engine)
 {
-    if (engine.player->stars_found < engine.player->max_stars)
+    if (engine.world->stars_found < engine.world->max_stars)
     {
-        engine.player->stars_found++;
+        engine.world->stars_found++;
     }
+    if (engine.world->stars_found == engine.world->max_stars)
+    {
+        // if (engine.level.filename == "level-00.txt")
+        // {
+        //     engine.world->load_level_tile->command = std::make_shared<LoadLevel>("level-00.txt");
+        // }
+
+        // world.ending_tile_position->tile
+        //     tile add load_level command to it
+        // create new tile with load_level position
+        // put all stars data in world
+        // vector of stars that hold the tiles of all the stars, stop remove from vector when found
+    }
+}
+
+void Spikes::execute(Object &object, Engine &engine)
+{
+    engine.player->combat.take_damage(2);
 }
 
 std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments)
@@ -113,6 +128,9 @@ std::shared_ptr<Command> create_command(std::string command_name, std::vector<st
     {
         return std::make_shared<StarFound>();
     }
-
+    else if (command_name == "spikes")
+    {
+        return std::make_shared<Spikes>();
+    }
     throw std::runtime_error("Unknown command: " + command_name);
 }

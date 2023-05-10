@@ -358,4 +358,9 @@ CMakeFiles/gamelib.dir/world.cpp.obj: \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\objecttype.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\level.h \
  C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\player.h \
- C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\fsm.h \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\engine.h \
+ C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.h \
+ C:/msys64/mingw64/include/SDL2/SDL_mixer.h \
+ C:/msys64/mingw64/include/c++/12.2.0/optional \
+ C:\Users\lukeg\code\GameDev\SDL-SDL2\Super-Awesome-Platformer\camera.h

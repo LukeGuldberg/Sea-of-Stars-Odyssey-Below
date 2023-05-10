@@ -27,6 +27,5 @@ public:
 
 private:
     std::vector<Tile> tiles;
-
     void check_bounds(int x, int y) const;
 };

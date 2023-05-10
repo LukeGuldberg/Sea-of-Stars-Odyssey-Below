@@ -1203,7 +1203,8 @@ CMakeFiles/gamelib.dir/camera.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Supe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h
 
 CMakeFiles/gamelib.dir/combat.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.cpp \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/combat.h \
@@ -1741,6 +1742,7 @@ CMakeFiles/gamelib.dir/command.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Sup
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.h
 
@@ -2111,7 +2113,8 @@ CMakeFiles/gamelib.dir/enemy.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/tilemap.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h
 
 CMakeFiles/gamelib.dir/enemytype.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.cpp \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
@@ -2840,6 +2843,7 @@ CMakeFiles/gamelib.dir/engine.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Supe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/msys64/mingw64/include/c++/12.2.0/chrono \
   C:/msys64/mingw64/include/c++/12.2.0/bits/chrono.h \
   C:/msys64/mingw64/include/c++/12.2.0/ratio \
@@ -2848,7 +2852,6 @@ CMakeFiles/gamelib.dir/engine.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Supe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/loadscreen.h
 
 CMakeFiles/gamelib.dir/fsm.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.cpp \
@@ -3220,6 +3223,7 @@ CMakeFiles/gamelib.dir/fsm.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-A
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/randomness.h \
   C:/msys64/mingw64/include/c++/12.2.0/algorithm \
@@ -5349,7 +5353,8 @@ CMakeFiles/gamelib.dir/player.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Supe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h
 
 CMakeFiles/gamelib.dir/projectile.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.cpp \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/projectile.h \
@@ -5718,7 +5723,8 @@ CMakeFiles/gamelib.dir/projectile.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/enemytype.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h
 
 CMakeFiles/gamelib.dir/quadtree.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.cpp \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
@@ -7083,7 +7089,12 @@ CMakeFiles/gamelib.dir/world.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/player.h \
-  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.h
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/fsm.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/engine.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/audio.h \
+  C:/msys64/mingw64/include/SDL2/SDL_mixer.h \
+  C:/msys64/mingw64/include/c++/12.2.0/optional \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/camera.h
 
 
 C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/world.cpp:

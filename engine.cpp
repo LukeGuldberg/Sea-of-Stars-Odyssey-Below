@@ -17,7 +17,7 @@ Engine::Engine(const Settings &settings)
 
 void Engine::load_level(const std::string &level_filename)
 {
-    Level level{level_filename, graphics, audio};
+    Level level = {level_filename, graphics, audio};
     // audio.play_sound("background", true);
     world = std::make_shared<World>(level);
 
@@ -185,7 +185,7 @@ void Engine::render()
 
     camera.render(world->tilemap, grid_on);
     camera.render_life(player->combat.health, player->combat.max_health);
-    camera.render_stars(player->stars_found, player->max_stars);
+    camera.render_stars(world->stars_found, world->max_stars);
     camera.render(*player);
     for (auto enemy : world->enemies)
     {

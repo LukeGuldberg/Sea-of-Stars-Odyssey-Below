@@ -369,6 +369,7 @@ CMakeFiles/main.dir/main.cpp.obj: C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awe
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/quadtree.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/animatedobject.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/objecttype.h \
+  C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h \
   C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/settings.h
 
 
@@ -421,6 +422,8 @@ C:/msys64/mingw64/include/c++/12.2.0/bits/stl_algo.h:
 C:/msys64/mingw64/include/c++/12.2.0/compare:
 
 C:/msys64/mingw64/include/c++/12.2.0/array:
+
+C:/Users/lukeg/code/GameDev/SDL-SDL2/Super-Awesome-Platformer/level.h:
 
 C:/msys64/mingw64/include/c++/12.2.0/bits/vector.tcc:
 

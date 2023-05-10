@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <iostream>
 
+// Level::Level() {}
+
 Level::Level(const std::string &filename, Graphics &graphics, Audio &audio)
     : filename{filename}
 {
@@ -67,6 +69,11 @@ void Level::load(Graphics &graphics, Audio &audio)
             {
                 Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 animated_objects.push_back(std::pair(pos, create_object_type(graphics, "coin")));
+                continue;
+            }
+            else if (symbol == '#')
+            {
+                load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 continue;
             }
 
@@ -206,6 +213,7 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
             }
             Sprite sprite = graphics.get_sprite(sprite_name);
             Tile tile{sprite, blocking};
+
             // read possible commands
             std::string command_name;
             if (ss >> command_name)
@@ -217,7 +225,16 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
                 }
                 tile.command = create_command(command_name, arguments);
             }
-            tile_types[symbol] = tile;
+
+            if (sprite_name == "hole")
+            {
+                *load_level_tile = tile;
+                // tile_types[symbol] = *load_level_tile;
+            }
+            else
+            {
+                tile_types[symbol] = tile;
+            }
         }
         else if (command == "animated_object")
         {

@@ -86,4 +86,12 @@ public:
 private:
 };
 
+class Spikes : public Command
+{
+public:
+    void execute(Object &object, Engine &engine) override;
+
+private:
+};
+
 std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments);
