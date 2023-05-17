@@ -2,4 +2,4 @@ title game
 screen_width 1280
 screen_height 720
 tile_size 64
-starting_level assets/level-03.txt
+starting_level assets/level-01.txt

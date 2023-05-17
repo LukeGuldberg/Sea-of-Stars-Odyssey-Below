@@ -204,12 +204,14 @@ void Engine::setup_end_screen()
     {
         running = true;
         Loadscreen game_over{"assets/game-won.txt", graphics, audio};
+        audio.play_sound("applause", false);
         world->backgrounds = game_over.backgrounds;
     }
     else
     {
         running = true;
         Loadscreen game_over{"assets/game-lost.txt", graphics, audio};
+        audio.play_sound("game-lost", false);
         world->backgrounds = game_over.backgrounds;
     }
 }
