@@ -18,7 +18,7 @@ World::World(const Level &level)
         enemies.push_back(std::make_shared<Enemy>(position, Vec<int>{1, 1}, type));
     }
     for (auto [position, type] : level.animated_objects)
-    {
+    { // put all animated stars in a vector for engine to display
         animated_objects.push_back(AnimatedObject{position, Vec{1, 1}, type});
         Tile &tile = tilemap(position.x, position.y);
         tile.command = std::make_shared<StarFound>(position);

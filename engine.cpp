@@ -195,10 +195,6 @@ void Engine::render()
     {
         camera.render(animated_object.position, animated_object.type.animation.get_sprite());
     }
-    // for (auto &projectile : world->projectiles)
-    // {
-    //     camera.render(projectile);
-    // }
 
     graphics.update();
 }

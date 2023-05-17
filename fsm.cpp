@@ -61,20 +61,6 @@ std::unique_ptr<State> Standing::handle_input(Player &player,
         {
             return std::make_unique<Running>(-player.walk_acceleration);
         }
-
-               else if (key == SDLK_f)
-        {
-            Vec<double> position{player.physics.position.x + player.size.x, player.physics.position.y + player.size.y}; // top corner of player
-            Vec<double> velocity{5, 15};
-            velocity.x += randint(-1, 1);
-            velocity.y += randint(-1, 1);
-            if (player.sprite.flip)
-            {
-                Vec<double> position{player.physics.position.x, player.physics.position.y + player.size.y}; // top corner of player
-                velocity.x *= -1;
-            }
-            player.next_command = std::make_unique<FireProjectile>(player.arrow, position, velocity);
-        }
     }
     return nullptr;
 }
@@ -112,9 +98,6 @@ void Standing::enter(Player &player)
 std::unique_ptr<State> Jumping::handle_input(Player &player,
                                              const SDL_Event &event)
 {
-    // reduced movement in left/right directions
-    // space -> add a small vy
-    // down -> drop faster
     if (event.type == SDL_KEYDOWN)
     {
         SDL_Keycode key = event.key.keysym.sym;
@@ -145,7 +128,6 @@ std::unique_ptr<State> Jumping::update(Player &player, Engine &engine,
     {
         player.falling.update(dt);
     }
-    // std::cout << jump_frame_count << '\n';
     if (player.physics.velocity.y > 0)
     {
         player.sprite = player.jumping.get_sprite();
@@ -213,7 +195,6 @@ std::unique_ptr<State> Running::update(Player &player, Engine &engine,
     player.physics.apply_friction(damping); // friction
     player.running.update(dt);
 
-    // if (!on_platform(player, *engine.world))
     if (player.physics.velocity.y > -2)
     {
         player.sprite = player.running.get_sprite();
@@ -300,8 +281,6 @@ void Hurting::enter(Player &player)
 {
     player.next_command = std::make_unique<Stop>();
     player.combat.invincible = true;
-    // player.standing_dmg.reset();
-    // player.standing_dmg.flip(player.sprite.flip);
 }
 void Hurting::exit(Player &player)
 {

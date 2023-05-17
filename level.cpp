@@ -41,11 +41,6 @@ void Level::load(Graphics &graphics, Audio &audio)
     height = lines.size();
     width = lines.front().size();
 
-    // ensure rectangular
-    // bool rectangular = std::all_of(std::begin(lines), std::end(lines), [=](const std::string &line)
-    //                                { return static_cast<int>(line.size()) == width; });
-    // error handling!
-
     for (int row = 0; row < height; ++row)
     {
         for (int x = 0; x < width; ++x)
@@ -60,29 +55,23 @@ void Level::load(Graphics &graphics, Audio &audio)
                 player_start_location = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 continue;
             }
-            else if (symbol == '*')
+            else if (symbol == '*') // animated star
             {
                 Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 animated_objects.push_back(std::pair(pos, create_object_type(graphics, "star")));
                 continue;
             }
-            // else if (symbol == '$')
-            // {
-            //     Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
-            //     animated_objects.push_back(std::pair(pos, create_object_type(graphics, "coin")));
-            //     continue;
-            // }
-            else if (symbol == '#')
+            else if (symbol == '#') // load_level tile for level 1
             {
                 load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 level_number = 1;
             }
-            else if (symbol == '$')
+            else if (symbol == '$') // load_level tile for level 2
             {
                 load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 level_number = 2;
             }
-            else if (symbol == '^')
+            else if (symbol == '^') // end game tile
             {
                 load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 level_number = 3;
@@ -108,15 +97,9 @@ void Level::load(Graphics &graphics, Audio &audio)
             else
             {
                 throw std::runtime_error("Incorrect tile type ");
-                // error
             }
         }
     }
-    // if (player_start_location == Vec<double>{-1, -1})
-    // {
-    //     throw std::runtime_error("Player location not found");
-    // }
-    // error handling for player_starting_location == -1,-1
 }
 
 void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Audio &audio)

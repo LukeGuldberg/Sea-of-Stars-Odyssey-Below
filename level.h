@@ -15,7 +15,6 @@ class Audio;
 class Level
 {
 public:
-    // Level();
     Level(const std::string &filename, Graphics &graphics, Audio &audio);
 
     std::string filename;
@@ -23,11 +22,6 @@ public:
     int level_number;
     Vec<double> player_start_location{-1, -1};
     Vec<double> load_level_position{};
-    // Vec<double> load_level3_position{};
-
-    // std::shared_ptr<Tile> load_level_tile;
-
-    // vec double load_level position
 
     std::unordered_map<char, Tile> tile_types;
     std::vector<std::pair<Vec<int>, Tile>> tiles;

@@ -13,7 +13,6 @@ Tilemap::Tilemap(int width, int height)
     {
         throw std::runtime_error("height must be positive");
     }
-    // std::fill(std::begin(tiles), std::end(tiles), tile.blocking);
 }
 
 const Tile &Tilemap::operator()(int x, int y) const
