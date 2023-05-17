@@ -64,17 +64,28 @@ void Level::load(Graphics &graphics, Audio &audio)
             {
                 Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
                 animated_objects.push_back(std::pair(pos, create_object_type(graphics, "star")));
-            }
-            else if (symbol == '$')
-            {
-                Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
-                animated_objects.push_back(std::pair(pos, create_object_type(graphics, "coin")));
                 continue;
             }
+            // else if (symbol == '$')
+            // {
+            //     Vec<double> pos = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
+            //     animated_objects.push_back(std::pair(pos, create_object_type(graphics, "coin")));
+            //     continue;
+            // }
             else if (symbol == '#')
             {
                 load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
-                continue;
+                level_number = 1;
+            }
+            else if (symbol == '$')
+            {
+                load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
+                level_number = 2;
+            }
+            else if (symbol == '^')
+            {
+                load_level_position = Vec<double>{static_cast<double>(x), static_cast<double>(height - row - 1)};
+                level_number = 3;
             }
 
             // determine the tile type
@@ -92,7 +103,6 @@ void Level::load(Graphics &graphics, Audio &audio)
             {
                 Vec<double> position{static_cast<double>(x), static_cast<double>(height - 1 - row)};
                 const EnemyType &type = eit->second(graphics);
-                std::cout << enemies.size() << '\n';
                 enemies.push_back({position, type});
             }
             else
@@ -102,6 +112,10 @@ void Level::load(Graphics &graphics, Audio &audio)
             }
         }
     }
+    // if (player_start_location == Vec<double>{-1, -1})
+    // {
+    //     throw std::runtime_error("Player location not found");
+    // }
     // error handling for player_starting_location == -1,-1
 }
 
@@ -225,32 +239,7 @@ void Level::load_theme(const std::string &theme_filename, Graphics &graphics, Au
                 }
                 tile.command = create_command(command_name, arguments);
             }
-
-            if (sprite_name == "hole")
-            {
-                *load_level_tile = tile;
-                // tile_types[symbol] = *load_level_tile;
-            }
-            else
-            {
-                tile_types[symbol] = tile;
-            }
-        }
-        else if (command == "animated_object")
-        {
-            char symbol;
-            std::string sprite_name;
-            ss >> symbol >> sprite_name;
-            if (!ss)
-            {
-                std::string msg = error_message(theme_filename, line_num, "unable to load enemy", line);
-                throw std::runtime_error(msg);
-            }
-            else
-            {
-                std::string msg = error_message(theme_filename, line_num, "Unknown command", line);
-                throw std::runtime_error(msg);
-            }
+            tile_types[symbol] = tile;
         }
     }
 }

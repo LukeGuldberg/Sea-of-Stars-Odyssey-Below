@@ -71,19 +71,22 @@ private:
 class LoadLevel : public Command
 {
 public:
-    LoadLevel(const std::string &filename);
+    LoadLevel(int level_num);
     void execute(Object &object, Engine &engine);
 
 private:
-    std::string filename;
+    int level_num;
 };
 
 class StarFound : public Command
 {
 public:
+    StarFound(const Vec<double> pos);
     void execute(Object &object, Engine &engine) override;
 
 private:
+    Vec<double> pos;
+    int level_num = 1;
 };
 
 class Spikes : public Command

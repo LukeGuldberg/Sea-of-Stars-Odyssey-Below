@@ -56,6 +56,10 @@ std::unique_ptr<Command> Enemy::update(Engine &engine, double dt)
         return std::make_unique<Run>(-physics.acceleration.x);
     }
     type.animation.flip(physics.acceleration.x < 0);
+    if (type.health == 5)
+    { // for octopus, its sprite is animated swim is flipped
+        type.animation.flip(physics.acceleration.x > 0);
+    }
     type.animation.update(dt);
     sprite = type.animation.get_sprite();
     return nullptr;

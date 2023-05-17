@@ -62,11 +62,7 @@ std::unique_ptr<State> Standing::handle_input(Player &player,
             return std::make_unique<Running>(-player.walk_acceleration);
         }
 
-        else if (key == SDLK_q)
-        {
-            return std::make_unique<AttackAll>();
-        }
-        else if (key == SDLK_f)
+               else if (key == SDLK_f)
         {
             Vec<double> position{player.physics.position.x + player.size.x, player.physics.position.y + player.size.y}; // top corner of player
             Vec<double> velocity{5, 15};
@@ -251,41 +247,6 @@ void Running::exit(Player &player)
     player.physics.acceleration.x = 0;
     falling_frame_count = 0;
     player.falling.reset();
-}
-
-//////////////////
-/// AttackAll
-//////////////////
-
-std::unique_ptr<State> AttackAll::handle_input(Player &,
-                                               const SDL_Event &event)
-{
-    if (event.type == SDL_KEYUP)
-    {
-        SDL_Keycode key = event.key.keysym.sym;
-        if (key == SDLK_q)
-        {
-            return std::make_unique<Standing>();
-        }
-    }
-    return nullptr;
-}
-std::unique_ptr<State> AttackAll::update(Player &player, Engine &engine,
-                                         double)
-{
-    for (auto enemy : engine.world->enemies)
-    {
-        player.combat.attack(*enemy);
-        if (enemy.get()->combat.health <= 0)
-        {
-            enemy.get()->type.animation = enemy.get()->type.death_sprite;
-        }
-        else
-        { // make a state for taking damage
-            enemy.get()->type.animation = enemy.get()->type.attacked_sprite;
-        }
-    }
-    return std::make_unique<Standing>();
 }
 
 ////////////

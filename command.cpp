@@ -6,13 +6,12 @@
 #include "world.h"
 #include "vec.h"
 #include "player.h"
+#include <iostream>
 ////////////////////
 // Stop
 ////////////////////
 void Stop::execute(Object &object, Engine &engine)
 {
-    // object.color = {125, 0, 125, 255};
-    // object.physics.velocity.y = 0;
     object.physics.acceleration.x = 0;
     engine.audio.play_sound("standing");
 }
@@ -24,7 +23,6 @@ Jump::Jump(double velocity) : velocity{velocity} {}
 
 void Jump::execute(Object &object, Engine &engine)
 {
-    // object.color = {0, 0, 255, 255};
     object.physics.velocity.y = velocity;
     engine.audio.play_sound("jumping");
 }
@@ -36,7 +34,6 @@ void Jump::execute(Object &object, Engine &engine)
 Run::Run(double acceleration) : acceleration{acceleration} {}
 void Run::execute(Object &object, Engine &engine)
 {
-    // object.color = {255, 0, 0, 255};
     object.physics.acceleration.x = acceleration;
     engine.audio.play_sound("swimming");
 }
@@ -70,38 +67,46 @@ void PlaySound::execute(Object &, Engine &engine)
     engine.audio.play_sound(sound_name, is_background);
 }
 
-LoadLevel::LoadLevel(const std::string &filename)
-    : filename{filename} {}
+LoadLevel::LoadLevel(int level_num) : level_num{level_num} {}
 
 void LoadLevel::execute(Object &, Engine &engine)
 {
-    engine.next_level = "assets\n" + filename;
+    engine.world->level_number++;
+    std::string filename = "assets/level-0";
+    filename += std::to_string(engine.world->level_number);
+    filename += ".txt";
+    engine.next_level = filename;
 }
 
-void StarFound::execute(Object &object, Engine &engine)
+StarFound::StarFound(const Vec<double> pos) : pos{pos} {}
+
+void StarFound::execute(Object &, Engine &engine)
 {
     if (engine.world->stars_found < engine.world->max_stars)
     {
         engine.world->stars_found++;
+        engine.world->animated_objects.erase(std::remove_if(engine.world->animated_objects.begin(), engine.world->animated_objects.end(), [&](AnimatedObject animated_object) -> bool
+                                                            { return animated_object.position == pos; }),
+                                             engine.world->animated_objects.end());
     }
-    if (engine.world->stars_found == engine.world->max_stars)
+    if (engine.world->stars_found == engine.world->max_stars && (engine.world->level_number == 1 || engine.world->level_number == 2))
     {
-        // if (engine.level.filename == "level-00.txt")
-        // {
-        //     engine.world->load_level_tile->command = std::make_shared<LoadLevel>("level-00.txt");
-        // }
-
-        // world.ending_tile_position->tile
-        //     tile add load_level command to it
-        // create new tile with load_level position
-        // put all stars data in world
-        // vector of stars that hold the tiles of all the stars, stop remove from vector when found
+        engine.world->load_level_tile.sprite = engine.graphics.get_sprite("open_treasure_chest");
+        engine.world->load_level_tile.command = std::make_shared<LoadLevel>(level_num);
+    }
+    else if (engine.world->stars_found == engine.world->max_stars && engine.world->level_number == 3)
+    {
+        engine.world->load_level_tile.sprite = engine.graphics.get_sprite("open_treasure_chest");
+        engine.world->load_level_tile.command = std::make_shared<EndGame>();
     }
 }
 
-void Spikes::execute(Object &object, Engine &engine)
+void Spikes::execute(Object &, Engine &engine)
 {
     engine.player->combat.take_damage(2);
+    engine.player->state->exit(*engine.player);
+    engine.player->state = std::make_unique<Hurting>(0.0);
+    engine.player->state->enter(*engine.player);
 }
 
 std::shared_ptr<Command> create_command(std::string command_name, std::vector<std::string> arguments)
@@ -115,18 +120,6 @@ std::shared_ptr<Command> create_command(std::string command_name, std::vector<st
         bool is_background = arguments.at(1) == "true" ? true : false;
         std::string sound_name = arguments.at(0);
         return std::make_shared<PlaySound>(sound_name, is_background);
-    }
-    else if (command_name == "load_level")
-    {
-        if (arguments.size() != 1)
-        {
-            throw std::runtime_error("load_level must be followed by a level filename");
-        }
-        return std::make_shared<LoadLevel>(arguments.front());
-    }
-    else if (command_name == "star_found")
-    {
-        return std::make_shared<StarFound>();
     }
     else if (command_name == "spikes")
     {

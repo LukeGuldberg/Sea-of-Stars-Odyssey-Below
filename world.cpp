@@ -5,8 +5,9 @@
 #include <array>
 #include <cmath>
 World::World(const Level &level)
-    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}, animated_background{level.animated_background}, load_level_position{level.load_level_position}, load_level_tile{level.load_level_tile}, quadtree{AABB{{level.width / 2.0, level.height / 2.0}, {level.width / 2.0, level.height / 2.0}}}
+    : tilemap{level.width, level.height}, backgrounds{level.backgrounds}, animated_background{level.animated_background}, load_level_tile{tilemap(level.load_level_position.x, level.load_level_position.y)}, level_number{level.level_number}, quadtree{AABB{{level.width / 2.0, level.height / 2.0}, {level.width / 2.0, level.height / 2.0}}}
 {
+
     for (auto [position, tile] : level.tiles)
     {
         tilemap(position.x, position.y) = tile;
@@ -19,6 +20,8 @@ World::World(const Level &level)
     for (auto [position, type] : level.animated_objects)
     {
         animated_objects.push_back(AnimatedObject{position, Vec{1, 1}, type});
+        Tile &tile = tilemap(position.x, position.y);
+        tile.command = std::make_shared<StarFound>(position);
     }
 }
 
@@ -31,23 +34,7 @@ std::shared_ptr<Command> World::touch_tiles(const Player &player)
     for (const Vec<int> &displacemnt : displacemnts)
     {
         Tile &tile = tilemap(x + displacemnt.x, y + displacemnt.y);
-        // if (tile.sprite.location == engine.graphics.get_sprite("hole").location)
-        // { // if tile is hole
-        //     if (player.stars_found == player.max_stars)
-        //     {
-        //         auto command = tile.command;
-        //         tile.command = nullptr;
-        //         return command;
-        //     }
-        // }
-        // else if (tile.sprite.location == engine.graphics.get_sprite("star").location)
-        // { // if tile is star
-        //     auto command = tile.command;
-        //     tile.command = nullptr;
-        //     tile.sprite = engine.graphics.get_sprite("none");
-        //     return command;
-        // }
-        // else
+
         if (tile.command)
         {
             auto command = tile.command;

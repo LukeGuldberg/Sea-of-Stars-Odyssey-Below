@@ -11,8 +11,8 @@ Player::Player(Engine &engine, const Vec<double> &position,
     : size{size}
 {
     physics.position = position;
-    combat.health = 5;
-    combat.max_health = 5;
+    combat.health = 6;
+    combat.max_health = 6;
     combat.attack_damage = 3;
     state = std::make_unique<Standing>();
     state->enter(*this);

@@ -20,9 +20,12 @@ public:
 
     std::string filename;
     int width, height;
+    int level_number;
     Vec<double> player_start_location{-1, -1};
-    Vec<double> load_level_position{-1, -1};
-    std::shared_ptr<Tile> load_level_tile;
+    Vec<double> load_level_position{};
+    // Vec<double> load_level3_position{};
+
+    // std::shared_ptr<Tile> load_level_tile;
 
     // vec double load_level position
 

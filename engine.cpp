@@ -18,7 +18,7 @@ Engine::Engine(const Settings &settings)
 void Engine::load_level(const std::string &level_filename)
 {
     Level level = {level_filename, graphics, audio};
-    // audio.play_sound("background", true);
+    audio.play_sound("background", true);
     world = std::make_shared<World>(level);
 
     // load player
@@ -195,10 +195,10 @@ void Engine::render()
     {
         camera.render(animated_object.position, animated_object.type.animation.get_sprite());
     }
-    for (auto &projectile : world->projectiles)
-    {
-        camera.render(projectile);
-    }
+    // for (auto &projectile : world->projectiles)
+    // {
+    //     camera.render(projectile);
+    // }
 
     graphics.update();
 }

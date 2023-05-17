@@ -31,10 +31,13 @@ public:
     std::vector<std::shared_ptr<Enemy>> enemies;
     std::vector<Projectile> projectiles;
     std::vector<AnimatedObject> animated_objects;
-    Vec<double> load_level_position;
-    std::shared_ptr<Tile> load_level_tile;
+
+    // Vec<double> load_level_position;
+    Tile &load_level_tile;
+
     int stars_found{0};
-    int max_stars{3};
+    int max_stars{5};
+    int level_number;
 
     void build_quadtree();
     void remove_inactive();

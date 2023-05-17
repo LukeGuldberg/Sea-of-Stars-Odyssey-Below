@@ -94,12 +94,6 @@ void Camera::render(const Object &object) const
     render(object.physics.position, object.sprite);
 }
 
-// void Camera::render(Vec<double> position, AnimatedSprite &animatedsprite)
-// { // draw animated objects
-//     auto pos = engine.camera.world_to_screen(position);
-//     graphics.draw_sprite(pos, animatedsprite.get_sprite());
-// }
-
 void Camera::render(const AnimatedSprite &animatedsprite, const Engine &engine) const
 {
     auto pos = engine.camera.world_to_screen({0, 18});

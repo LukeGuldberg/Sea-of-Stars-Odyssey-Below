@@ -10,7 +10,7 @@ class Engine;
 class EnemyType
 {
 public:
-    AnimatedSprite animation, death_sprite, attack_sprite, attacked_sprite;
+    AnimatedSprite animation;
     Vec<double> acceleration;
     int health, damage, hurting_duration;
     double elapsed_time;

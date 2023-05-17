@@ -42,28 +42,26 @@ EnemyType create_shark(Graphics &graphics)
 {
     Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("shark_swimming", 0.15, true, false);
-    AnimatedSprite death_sprite = graphics.get_animated_sprite("shark_death", 0.15, true, false);
-    AnimatedSprite attack_sprite = graphics.get_animated_sprite("shark_attack", 0.15, true, false);
-    AnimatedSprite attacked_sprite = graphics.get_animated_sprite("shark_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, 2, 0, default_behavior};
-    //    return EnemyType{sprite, death_sprite, attack_sprite, acceleration, 8, 2, default_behavior};
-    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^implement
+    // AnimatedSprite death_sprite = graphics.get_animated_sprite("shark_death", 0.15, true, false);
+    // AnimatedSprite attack_sprite = graphics.get_animated_sprite("shark_attack", 0.15, true, false);
+    // AnimatedSprite attacked_sprite = graphics.get_animated_sprite("shark_attacked", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 8, 2, 2, 0, default_behavior};
 }
 EnemyType create_crab(Graphics &graphics)
 {
     Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("crab_swimming", 0.15, true, false);
-    AnimatedSprite death_sprite = graphics.get_animated_sprite("crab_death", 0.15, true, false);
-    AnimatedSprite attack_sprite = graphics.get_animated_sprite("crab_attack", 0.15, true, false);
-    AnimatedSprite attacked_sprite = graphics.get_animated_sprite("crab_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 8, 2, 2, 0, default_behavior};
+    // AnimatedSprite death_sprite = graphics.get_animated_sprite("crab_death", 0.15, true, false);
+    // AnimatedSprite attack_sprite = graphics.get_animated_sprite("crab_attack", 0.15, true, false);
+    // AnimatedSprite attacked_sprite = graphics.get_animated_sprite("crab_attacked", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 8, 2, 2, 0, default_behavior};
 }
 EnemyType create_octopus(Graphics &graphics)
 {
     Vec<double> acceleration{20, 0};
     AnimatedSprite sprite = graphics.get_animated_sprite("octopus_swimming", 0.15, true, false);
-    AnimatedSprite death_sprite = graphics.get_animated_sprite("octopus_death", 0.15, true, false);
-    AnimatedSprite attack_sprite = graphics.get_animated_sprite("octopus_attack", 0.15, true, false);
-    AnimatedSprite attacked_sprite = graphics.get_animated_sprite("octopus_attacked", 0.15, true, false);
-    return EnemyType{sprite, death_sprite, attack_sprite, attacked_sprite, acceleration, 5, 3, 2, 0, default_behavior};
+    // AnimatedSprite death_sprite = graphics.get_animated_sprite("octopus_death", 0.15, true, false);
+    // AnimatedSprite attack_sprite = graphics.get_animated_sprite("octopus_attack", 0.15, true, false);
+    // AnimatedSprite attacked_sprite = graphics.get_animated_sprite("octopus_attacked", 0.15, true, false);
+    return EnemyType{sprite, acceleration, 5, 2, 2, 0, default_behavior};
 }
