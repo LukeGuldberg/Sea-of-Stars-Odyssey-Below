@@ -69,7 +69,7 @@ name_of_sprite x y width height
 animated_sprite x y width height frames
 ```
 
-All sprites used can be found on https://craftpix.net/.
+All sprites used can be found on https://craftpix.net/.<br>
 [Tileset](https://craftpix.net/product/water-pack-tileset-for-platformer-pixel-art/?num=1&count=18&sq=underwater&pos=0)<br>
 [Enemy Mobs](https://craftpix.net/product/water-monsters-pixel-art-sprite-sheet-pack/)<br>
 [Character](https://craftpix.net/freebies/free-swimming-characters-animation-pixel-art/)<br>
