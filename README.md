@@ -36,9 +36,6 @@ then build it using
 cmake --build .
 ```
 
-Either method generates an executable in the build directory called
-`game`. This executable expects to find the settings
-
 Either method will generate an executable in the build directory.
 
 ## Running
