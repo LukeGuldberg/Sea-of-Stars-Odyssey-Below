@@ -1,0 +1,11 @@
+woodcutter.xcf
+
+woodcutter 0 0 48 48 4 6
+
+woodcutter_standing 0 0 48 48 4 3
+woodcutter_swimming 0 96 48 48 4 5
+woodcutter_jumping 0 144 48 48 4 5
+woodcutter_falling 0 192 48 48 4 5
+woodcutter_standing_dmg 0 336 48 48 4 3
+woodcutter_swimming_dmg 0 384 48 48 4 3
+woodcutter_jumping_dmg 0 432 48 48 4 3

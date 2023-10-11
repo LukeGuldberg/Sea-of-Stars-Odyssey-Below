@@ -1,0 +1,6 @@
+octopus.png
+
+octopus_swimming 0 768 96 96 3 6
+octopus_death 0 384 96 96 3 6
+octopus_attack 0 0 96 96 3 6
+octopus_attacked 0 480 96 96 3 2

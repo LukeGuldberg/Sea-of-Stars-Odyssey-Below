@@ -1,0 +1,7 @@
+load-sounds sounds.txt
+
+background end_lost1.xcf 3 4
+background end2.png 3 2
+background end3.png 3 1
+background end4.png 3 1
+background end5.png 3 1

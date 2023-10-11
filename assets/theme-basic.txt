@@ -1,0 +1,117 @@
+load-spritesheet mytileset.txt
+load-spritesheet decors.txt
+load-spritesheet objects.txt
+load-spritesheet myobjects.txt
+load-spritesheet characters.txt
+load-spritesheet crab.txt
+load-spritesheet shark.txt
+load-spritesheet octopus.txt
+load-spritesheet animated_objects.txt
+
+load-sounds sounds.txt
+
+background top_bg1.png 4 0
+animated_background animated_bg1.png animated_bg2.png animated_bg3.png 4
+ 
+enemy S shark 0
+enemy C crab 0
+enemy O octopus 0
+
+tile z ship false
+tile Z anchor false
+tile x spikes_floor false spikes
+tile X spikes_ceil false spikes
+tile ` spikes_left false spikes
+tile V spikes_right false spikes
+
+tile q floor_left true
+tile w floor_center true
+tile e floor_right true
+tile A dirt_block true
+
+tile Q ceil_left true
+tile W ceil_center true
+tile E ceil_right true
+
+tile a dirt_l true
+tile s dirt_c true
+tile d dirt_r true
+
+tile u dirt_ramp_left true
+tile % dirt_ramp_right true
+tile r wall_center true
+tile t empty_space true
+tile y dirt_blank true
+
+tile + gold_rock_left true
+tile _ gold_rock_right true
+
+tile ) full_center true
+tile ( full_left true
+tile & full_right true
+
+tile T tree false
+tile B bush false
+
+tile ! none false play_sound action true
+tile # closed_treasure_chest false 
+tile $ closed_treasure_chest false
+tile ^ closed_treasure_chest false
+
+
+tile 1 rock1 false
+tile 2 rock2 false
+tile 3 rock3 false
+tile 4 rock4 false
+tile 5 rock5 false
+tile 6 rock6 false
+tile 7 rock7 false
+
+tile 8 blue_coral1 false
+tile 9 blue_coral2 false
+tile 0 blue_coral3 false
+tile - blue_coral4 false
+tile = blue_coral5 false
+
+tile \ red_coral1 false
+tile ] red_coral2 false    
+tile [ red_coral3 false
+tile p red_coral4 false
+tile o red_coral5 false
+
+tile | yellow_coral1 false
+tile } yellow_coral2 false
+tile { yellow_coral3 false
+tile P yellow_coral4 false
+tile D yellow_coral5 false
+tile U yellow_coral6 false
+tile Y yellow_coral7 false
+
+tile ' sea_weed1 false
+tile ; sea_weed2 false
+tile l sea_weed3 false
+tile k sea_weed4 false
+tile j sea_weed5 false
+tile h sea_weed6 false
+
+tile " log1 false
+tile : log2 false
+tile L log3 false
+tile K log4 false
+tile J log5 false
+tile H log6 false
+
+tile / weed1 false
+tile . weed2 false
+tile , weed3 false
+tile m weed4 false
+
+tile n barrel1 false
+tile b barrel2 false
+tile v barrel3 false
+tile c barrel4 false
+
+tile ? stump1 false
+tile > stump2 false
+tile < stump3 false
+tile M stump4 false

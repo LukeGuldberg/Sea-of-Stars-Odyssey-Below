@@ -1,0 +1,9 @@
+spritesheet.png
+
+none 0 0 16 16 4 1
+treasure_chest 336 304 16 16 4 1
+hole 96 144 16 16 4 1
+arrow 308 186 7 21 4 1
+
+heart 288 256 16 16 4 1
+empty_heart 320 256 16 16 4 1

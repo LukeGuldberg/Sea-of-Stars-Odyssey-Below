@@ -1,0 +1,3 @@
+Decors.png
+tree 16 0 80 112 4
+bush 112 96 48 16 4

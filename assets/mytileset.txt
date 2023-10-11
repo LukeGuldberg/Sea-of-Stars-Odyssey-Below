@@ -1,0 +1,32 @@
+mytileset.png
+floor_left 0 128 32 32 2
+floor_center 32 128 32 32 2   
+floor_right 64 128 32 32 2
+
+dirt_block 96 224 32 32 2
+dirt_blank 32 160 32 32 2
+dirt_l 0 160 32 32 2
+dirt_c 32 160 32 32 2
+dirt_r 64 160 32 32 2
+dirt_ramp_right 128 128 32 32 2 
+dirt_ramp_left 160 128 32 32 2
+
+ceil_left 0 190 32 32 2
+ceil_center 32 190 32 32 2
+ceil_right 64 190 32 32 2
+
+gold_rock_left 0 255 32 32 2
+gold_rock_right 32 255 32 32 2
+light_rock_left 128 255 32 32 2
+light_rock_middle 160 255 32 32 2
+light_rock_right 192 255 32 32 2
+
+wall_top 96 128 32 32 2
+wall_center 96 160 32 32 2
+wall_bottom 96 192 32 32 2
+
+empty_space 0 288 32 32 2
+
+full_center 32 224 32 32 2
+full_left 0 224 32 32 2
+full_right 64 224 32 32 2

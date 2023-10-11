@@ -1,0 +1,75 @@
+objects.xcf
+
+none 0 32 32 32 4
+
+closed_treasure_chest 0 0 32 32 4
+open_treasure_chest 32 0 32 32 4
+
+star 224 192 32 32 4    
+empty_star 352 192 32 32 4
+
+spikes_floor 64 0 32 32 4
+spikes_ceil 256 224 32 16 4
+spikes_left 288 224 16 32 4 
+spikes_right 240 224 16 32 4
+
+anchor 0 32 64 64 4
+
+ship 0 160 224 128 4
+
+rock1 96 0 32 32 4  
+rock2 128 0 32 32 4
+rock3 160 0 32 32 4
+rock4 192 0 32 32 4
+rock5 224 0 32 32 4 
+rock6 256 0 32 32 4
+rock7 288 0 32 32 4
+
+blue_coral1 64 32 32 32 4
+blue_coral2 96 32 32 32 4
+blue_coral3 128 32 32 32 4
+blue_coral4 160 32 32 32 4
+blue_coral5 192 32 32 32 4
+
+red_coral1 224 32 32 32 4
+red_coral2 256 32 32 32 4   
+red_coral3 288 32 32 32 4   
+red_coral4 320 32 32 32 4
+red_coral5 352 32 32 32 4
+
+yellow_coral1 32 96 32 32 4
+yellow_coral2 64 96 32 32 4
+yellow_coral3 96 96 32 32 4
+yellow_coral4 128 96 32 32 4 
+yellow_coral5 160 96 32 32 4
+yellow_coral6 192 96 32 32 4
+yellow_coral7 224 96 32 32 4
+
+sea_weed1 0 96 32 64 4
+sea_weed2 32 128 32 32 4
+sea_weed3 64 128 32 32 4
+sea_weed4 96 128 32 32 4
+sea_weed5 128 128 32 32 4
+sea_weed6 160 128 32 32 4
+
+log1 64 64 32 32 4
+log2 96 64 32 32 4
+log3 128 64 32 32 4
+log4 160 64 32 32 4
+log5 192 64 32 32 4
+log6 224 64 32 32 4
+
+weed1 256 64 32 32 4    
+weed2 288 64 32 32 4
+weed3 320 64 32 32 4
+weed4 352 64 32 32 4
+
+barrel1 256 96 32 32 4
+barrel2 288 96 32 32 4
+barrel3 320 96 32 32 4
+barrel4 352 96 32 32 4
+
+stump1 192 128 32 32 4
+stump2 224 128 32 32 4
+stump3 256 128 32 32 4
+stump4 288 128 32 32 4

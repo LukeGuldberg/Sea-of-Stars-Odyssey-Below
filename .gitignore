@@ -2,5 +2,9 @@ build/*
 *.o
 .vscode
 *.dll
-assets/*
 notes.txt
+assets/*.png
+assets/*.wav
+assets/*.xcf
+assets/*.mp3
+assets/*.zip
