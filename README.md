@@ -2,7 +2,7 @@
 
 Sea of Stars: Odyssey Below is an underwater, sea exploration/survival platformer.
 This game was created as my project in CSC 391 - Game Development. Sea of Stars is
-written is C++ and utilizes the SDL2 library. This project demonstrates use of a
+written in C++ and utilizes the SDL2 library. This project demonstrates use of a
 [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) used to
 handle all actions, a [quadtree](https://en.wikipedia.org/wiki/Quadtree) for checking
 collisions on a large scale, and
@@ -44,7 +44,7 @@ Running this game requires the SDL2 library to be installed. This
 is done very easily on MacOS and Windows through [MSYS2](https://www.msys2.org/#installation). <br>
 
 In the MSYS2 terminal, the following command can be run to install the library and
-configure all pathing for dll files.<br>
+configure all pathing for DLL files.<br>
 `pacman -S mingw64/mingw-w64-x86_64-SDL2 mingw64/mingw-w64-x86_64-SDL2_mixer mingw64/mingw-w64-x86_64-SDL2_image mingw64/mingw-w64-x86_64-SDL2_ttf mingw64/mingw-w64-x86_64-SDL2_net`
 
 The terminal used to run the game must be in the parent directory that the "assets" folder is within. From there, you can run `.\build\____` (name of executable within build folder)
