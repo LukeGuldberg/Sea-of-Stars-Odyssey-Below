@@ -55,11 +55,11 @@ The terminal used to run the game must be in the parent directory that the "asse
 ## Assets
 
 This game loads all assets through text files. Using the SDL2 library,
-a pixel coordinates can be used to gather a sprite to be displayed on screen.
+pixel coordinates can be used to gather a sprite to be displayed on the screen.
 This is used for the tiles, enemy mobs, animations, backgrounds, player models,
 and everything else you see on the screen. The very first line of each of these text
-files is the name of the png that the coorinates refer to. Each different
-form of animations requires different types of data to be stored,
+files is the name of the .png that the coordinates refer to. Each different
+form of animations require different types of data to be stored,
 but an example of what these parameters would look like is:
 
 ```
@@ -80,6 +80,6 @@ Level loading is accomplished using a text file that references
 sprites gathered by the text files mentioned above. Theme-basic.txt
 is essentially a list of all tiles that could be included in a level.
 Each tile is assigned a keyboard character and marked true or false for
-whether it is a blocking tile. These characters can be formatted in a seperate
+whether it is a blocking tile. These characters can be formatted in a separate
 text file to create the level (see level-01.txt). How level-01.txt appears
 as characters, is translated into the level as tiles.
