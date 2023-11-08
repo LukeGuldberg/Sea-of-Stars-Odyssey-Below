@@ -9,7 +9,11 @@ collisions on a large scale, and
 [unordered maps](<https://en.wikipedia.org/wiki/Unordered_associative_containers_(C%2B%2B)>)
 to store assets.
 <video src="READMEdemo.mp4" controls title="Demo"></video>
-![Watch the video](READMEdemo.mp4)
+
+
+
+https://github.com/LukeGuldberg/Sea-of-Stars-Odyssey-Below/assets/103283766/4f879a87-8471-44bd-baf3-3d49b4c8df96
+
 
 <!-- ![ScreenShot](READMEScreenshot1.png)
 ![ScreenShot](READMEScreenshot2.png)
