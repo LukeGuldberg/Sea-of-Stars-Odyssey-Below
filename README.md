@@ -8,10 +8,11 @@ handle all actions, a [quadtree](https://en.wikipedia.org/wiki/Quadtree) for che
 collisions on a large scale, and
 [unordered maps](<https://en.wikipedia.org/wiki/Unordered_associative_containers_(C%2B%2B)>)
 to store assets.
+<video src="READMEdemo.mp4" controls title="Title"></video>
 
-![ScreenShot](READMEScreenshot1.png)
+<!-- ![ScreenShot](READMEScreenshot1.png)
 ![ScreenShot](READMEScreenshot2.png)
-![ScreenShot](READMEScreenshot3.png)
+![ScreenShot](READMEScreenshot3.png) -->
 
 While avoiding any enemy mobs and obstacles that try and get the best of you, gather all the stars scattered around each level to progress and reach the end of the game!
 
